@@ -1,0 +1,21 @@
+{
+  "name": "starter-layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "clean": "rm node_modules",
+    "reinstall": "npm run clean && npm install"
+  },
+  "author": "Davlatyor Botirbaev",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^3.9.5"
+  }
+}
