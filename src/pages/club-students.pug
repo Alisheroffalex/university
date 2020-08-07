@@ -1,0 +1,94 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'cafedra',
+            pageTitle: 'Клуб выпускников',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Деятельность',
+                    href: '/'
+                },
+                {
+                    name: 'Научная деятельность',
+                    href: '/'
+                }
+            ],
+            bosses: [
+                {
+                    name: 'Мансуров Азаз Турдимуратович',
+                    degrees: 'Инженер путей сообщения, Почётный строитель РФ',
+                    job: 'Генеральный директор ОАО «Трансмост»',
+                    img: 'rektor.png',
+                    graduated: 'Факультет «Железнодорожное машиностроение»'
+                },
+    
+                {
+                    name: 'Мансуров Азаз Турдимуратович',
+                    degrees: 'Инженер путей сообщения, Почётный строитель РФ',
+                    job: 'Генеральный директор ОАО «Трансмост»',
+                    img: 'prorektor1.png',
+                    graduated: 'Факультет «Железнодорожное машиностроение»'
+                    
+                },
+                {
+                    name: 'Мансуров Азаз Турдимуратович',
+                    degrees: 'Инженер путей сообщения, Почётный строитель РФ',
+                    job: 'Генеральный директор ОАО «Трансмост»',
+                    img: 'prorektor2.png',
+                    graduated: 'Факультет «Железнодорожное машиностроение»'
+                }
+    
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/graduate_banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        each person in page.bosses 
+            .person-card 
+                .row 
+                    .person-img     
+                        img(src="images/"+person.img)
+                    .person-info 
+                        h3.normal-header= person.name 
+                        
+                        .row.info-row 
+                            .col 
+                                p.gray-text Научная степень и звание:
+                            .col-2 
+                                p.gray-text 
+                                    b= person.degrees
+                        
+                        .row.info-row 
+                            .col 
+                                p.gray-text Должность:
+                            .col-2 
+                                p.gray-text 
+                                    b= person.job
+                        
+                        .row.info-row 
+                            .col 
+                                p.gray-text Выпускник:
+                            .col-2 
+                                p.gray-text 
+                                    b= person.graduated
+                        .row.info-row.responsive.center
+                            a(href="#").blue-text Подробнее

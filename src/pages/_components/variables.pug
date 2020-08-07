@@ -20,11 +20,13 @@
     var assets = {
         skeleton: {
             fonts: [
-                //- '/fonts/font-file.css'
+                //- '/fonts/fontawesome/css/all.min.css'
             ],
             styles: [
-                '/styles/a-main.css'
-                //- '/styles/style-file.css'
+                '/styles/a-main.css',
+                '/fonts/fontawesome/css/all.min.css',
+                '/fonts/gilroy/gilroy.css',
+                '/styles/nav.css'
             ],
             scripts: [
                 //- '/scripts/script-file.js'
@@ -33,11 +35,556 @@
         layout: {
             public: {
                 styles: [
-                    //- '/styles/style-file.css'
+                    '/styles/b-footer.css',
+                    '/styles/animate.css',
                 ],
                 scripts: [
                     //- '/scripts/script-file.js'
                 ]
             }
+        },
+        page: {
+            home: {
+                styles: [
+                    '/styles/b-header.css',
+                    '/styles/animate.css',
+                    '/styles/main-news.css',
+                    '/styles/slick.css',
+                    '/styles/university.css',
+                    '/styles/faculty.css',
+                    '/styles/news.css',
+                    '/styles/services-section.css',
+                    '/styles/main-page.css',
+                    '/styles/responsive.css',
+                    
+                ],
+                scripts: [
+                    '/scripts/jquery.min.js',
+                    '/scripts/slick.min.js',
+                    '/scripts/main-page.js',
+                    'scripts/scrollmagic.js',
+                    'http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js',
+                    'scripts/tweenMax.min.js',
+                    'scripts/animation.gsap.js',
+                    'scripts/animationHandle.js',
+                    'scripts/responsive.js',
+                ]
+            },
+            news: {
+                styles: [   
+                    '/styles/slick.css',
+                    '/styles/animate.css',
+                    '/styles/main-news.css',
+                    '/styles/news-page.css',
+                    '/styles/responsive.css',
+                ],
+                scripts: [
+                    '/scripts/jquery.min.js',
+                    '/scripts/slick.min.js',
+                    'scripts/main-page.js'
+                ]
+            },
+            singlepost: {
+                styles: [   
+                    '/styles/slick.css',
+                    '/styles/main-news.css',
+                    '/styles/single-post.css',
+                    '/styles/responsive.css',
+                ],
+                scripts: [
+                    '/scripts/jquery.min.js',
+                    '/scripts/slick.min.js',
+                    'scripts/main-page.js',
+                    'scripts/responsive.js'
+                ]
+            },
+            university: {
+                styles: [   
+                    '/styles/slick.css',
+                    '/styles/university-page.css',
+                    '/styles/responsive.css',
+
+                ],
+                scripts: [
+                    '/scripts/jquery.min.js',
+                    '/scripts/slick.min.js',
+                    'scripts/main-page.js',
+                    '/styles/responsive.css',
+                ]
+            },
+            cafedra: {
+                styles: [   
+                    '/styles/slick.css',
+                    '/styles/cafedra-page.css',
+                    '/styles/responsive.css'
+                ],
+                scripts: [
+                    '/scripts/jquery.min.js',
+                    '/scripts/slick.min.js',
+                    'scripts/main-page.js',
+                    '/styles/responsive.css',
+                ]
+            },
+            contact: {
+                styles: [   
+                    '/styles/slick.css',
+                    '/styles/iziModal.min.css',
+                    '/styles/cafedra-page.css',
+                    '/styles/responsive.css',
+                ],
+                scripts: [
+                    '/scripts/jquery.min.js',
+                    '/scripts/slick.min.js',
+                    'https://api-maps.yandex.ru/2.1/?apikey=b17133fc-8c6f-4350-bfa0-c244e7ac583f&lang=ru_RU',
+                    '/scripts/main-page.js',
+                    '/scripts/iziModal.min.js',
+                    '/scripts/validation.js',
+                    '/scripts/contact.js'
+                ]
+            }
         }
+    }
+
+    var header = { 
+        logo: 'logo.png',
+        uzbLogos: [
+            {
+                src: 'uzb-flag.png',
+                href: '#'
+            },
+            {
+                src: 'uzb-logo.png',
+                href: '#'
+            },
+            {   
+                src: 'music.png',
+                href: '#'
+            }
+        ],
+        menu: [
+            {
+                title: 'Новости',
+                href: '#'
+            },
+            {
+                title: 'Структура ВУЗа',
+                href: '#'
+            },
+            {
+                title: 'Деятельность',
+                href: '#',
+                dropdown: [
+                    {
+                        title: 'Научная деятельность',
+                        href: '#',
+                        dropdown: [
+                            {
+                                title: 'Ученый совет',
+                                href: '#'
+                            },
+                            {
+                                title: 'Научные журналы',
+                                href: '#'
+                            },
+                            {
+                                title: 'Учитель/ученик школы',
+                                href: '#'
+                            },
+                            {
+                                title: 'Планы на будущее',
+                                href: '#'
+                            },
+                            {
+                                title: 'Научно-исследовательская деятельность',
+                                href: '#'
+                            },
+                            {
+                                title: 'Автореферат',
+                                href: '#'
+                            },
+                            {
+                                title: 'Направления исследований',
+                                href: '#'
+                            },
+                            {
+                                title: 'Кандидатские экзамены',
+                                href: '#'
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Международные отношения',
+                        href: '#',
+                        dropdown: [
+                            {
+                                title: 'Ученый совет',
+                                href: '#'
+                            },
+                            {
+                                title: 'Научные журналы',
+                                href: '#'
+                            },
+                            {
+                                title: 'Учитель/ученик школы',
+                                href: '#'
+                            },
+                            {
+                                title: 'Планы на будущее',
+                                href: '#'
+                            },
+                            {
+                                title: 'Научно-исследовательская деятельность',
+                                href: '#'
+                            },
+                            {
+                                title: 'Автореферат',
+                                href: '#'
+                            },
+                            {
+                                title: 'Направления исследований',
+                                href: '#'
+                            },
+                            {
+                                title: 'Кандидатские экзамены',
+                                href: '#'
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Финансовая деятельность',
+                        href: '#',
+                        dropdown: [
+                            {
+                                title: 'Ученый совет',
+                                href: '#'
+                            },
+                            {
+                                title: 'Научные журналы',
+                                href: '#'
+                            },
+                            {
+                                title: 'Учитель/ученик школы',
+                                href: '#'
+                            },
+                            {
+                                title: 'Планы на будущее',
+                                href: '#'
+                            },
+                            {
+                                title: 'Научно-исследовательская деятельность',
+                                href: '#'
+                            },
+                            {
+                                title: 'Автореферат',
+                                href: '#'
+                            },
+                            {
+                                title: 'Направления исследований',
+                                href: '#'
+                            },
+                            {
+                                title: 'Кандидатские экзамены',
+                                href: '#'
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Культурно-просветительская деятельность',
+                        href: '#',
+                        dropdown: [
+                            {
+                                title: 'Ученый совет',
+                                href: '#'
+                            },
+                            {
+                                title: 'Научные журналы',
+                                href: '#'
+                            },
+                            {
+                                title: 'Учитель/ученик школы',
+                                href: '#'
+                            },
+                            {
+                                title: 'Планы на будущее',
+                                href: '#'
+                            },
+                            {
+                                title: 'Научно-исследовательская деятельность',
+                                href: '#'
+                            },
+                            {
+                                title: 'Автореферат',
+                                href: '#'
+                            },
+                            {
+                                title: 'Направления исследований',
+                                href: '#'
+                            },
+                            {
+                                title: 'Кандидатские экзамены',
+                                href: '#'
+                            },
+                        ]
+                    },
+                ]
+            },
+            {
+                title: 'Абитуриент',
+                href: '#'
+            },
+            {
+                title: 'Студент',
+                href: '#'
+            },
+        ],
+        carousel: [
+            {
+                header: 'Сроки подачи документов и даты зачисления',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                img: 'students.png'
+            },
+            {
+                header: 'Сроки подачи документов и даты зачисления',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                img: 'students.png'
+            },
+            {
+                header: 'Сроки подачи документов и даты зачисления',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                img: 'students.png'
+            }
+        ]   
+    }
+
+    var mainNews = {
+        blockTitle: 'Основные новости'
+    }
+
+    var university = {
+        blockTitle: 'Университет',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        img: 'university.png'
+    }
+
+    var faculty = {
+        blockTitle: 'Факультеты',
+        faculties: [
+            {
+                title: 'Общеобразовательный факультет Общеобразовательный факультет',
+                img: 'faculty1.png'
+            },
+            {
+                title: 'Общеобразовательный факультет',
+                img: 'faculty1.png'
+            },
+            {
+                title: 'Общеобразовательный факультет',
+                img: 'faculty1.png'
+            },
+            {
+                title: 'Общеобразовательный факультет',
+                img: 'faculty1.png'
+            },
+            {
+                title: 'Общеобразовательный факультет',
+                img: 'faculty1.png'
+            },
+            {
+                title: 'Общеобразовательный факультет',
+                img: 'faculty1.png'
+            },
+            {
+                title: 'Общеобразовательный факультет',
+                img: 'faculty1.png'
+            },
+            {
+                title: 'Общеобразовательный факультет',
+                img: 'faculty1.png'
+            },
+        ]
+    }
+
+    var newsSection = {
+        blockTitle: 'Новости',
+        mainNews: {
+            title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+            img: 'big-card.png',
+            date: '12.07.2020',
+            category: 'Жизнь университета'
+        },
+        news: [
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+            {
+                title: 'Поступающие в Российский университет транспорта очно получат вагон пожеланий от сотрудников и преподавателей',
+                img: 'big-card.png',
+                date: '12.07.2020',
+                category: 'Жизнь университета'
+            },
+        ]
+    }
+
+    var footer = {
+        slider: [
+            {
+                img: 'lexuz.png',
+                title: 'Ўзбекистон Республикаси Қонун ҳужжатлари маълумотлари миллий базаси'
+            },
+            {
+                img: 'govuz.png',
+                title: 'Единый портал интерактивных государственных услуг'
+            },
+            {
+                img: 'gerb.png',
+                title: 'Единый портал интерактивных государственных услуг'
+            },
+            {
+                img: 'lexuz.png',
+                title: 'Ўзбекистон Республикаси Қонун ҳужжатлари маълумотлари миллий базаси'
+            },
+            {
+                img: 'govuz.png',
+                title: 'Единый портал интерактивных государственных услуг'
+            },
+            {
+                img: 'gerb.png',
+                title: 'Единый портал интерактивных государственных услуг'
+            }
+
+        ],
+        address: 'г. Москва, ул Образцова, д. 13, стр. 9',
+
+        news: [
+            {
+                name: 'Новости университета',
+                href: '#'
+            },
+            {
+                name: 'Массовые мероприятия',
+                href: '#'
+            },
+            {
+                name: 'Обьявления',
+                href: '#'
+            },
+            {
+                name: 'Обмен новостями и объявлениями в социальных сетях',
+                href: '#'
+            }
+        ],
+        structure: [
+            {
+                name: 'Устав университета',
+                href: '#'
+            },
+            {
+                name: 'История университета',
+                href: '#'
+            },
+            {
+                name: 'Начальство',
+                href: '#'
+            },
+            {
+                name: 'Факультеты',
+                href: '#'
+            },
+            {
+                name: 'Кафедры',
+                href: '#'
+            },
+            {
+                name: 'Центр и отделения',
+                href: '#'
+            },
+        ],
+        job: [
+            {
+                name: 'Научная деятельность',
+                href: '#'
+            },
+            {
+                name: 'Международные отношения',
+                href: '#'
+            },
+            {
+                name: 'Финансовая деятельность',
+                href: '#'
+            },
+            {
+                name: 'Культурно-просветительская деятельность',
+                href: '#'
+            }
+        ],
+        student: [
+            {
+                name: 'Бакалавриат',
+                href: '#'
+            },
+            {
+                name: 'Магистратура',
+                href: '#'
+            }
+        ],
+        other: [
+            {
+                name: 'Международные студенты',
+                href: '#'
+            },
+            {
+                name: 'Нормативно- правовые документы',
+                href: '#'
+            },
+            {
+                name: 'Контакты',
+                href: '#'
+            }
+        ],
+
     }

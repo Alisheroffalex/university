@@ -1,0 +1,83 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'news',
+            newsSectionTitle: 'Новости',
+            newsPagination: true,
+            pageTitle: 'Новости',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                }
+            ],
+            news: [
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Преподаватели дали советы будущим студентам Российского университеasdsadas sad sad asdта транспорта',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Преподаватели дали советы будущим студентам Российского университеasdsadas sad sad asdта транспорта',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                }
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.news.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    + main-news

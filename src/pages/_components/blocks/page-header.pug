@@ -1,0 +1,10 @@
+mixin page-header 
+    .container
+        include nav.pug
+
+        .breadcumbs 
+            each link in page.pageParents
+                a(href=link.href, class="gray-text")= link.name 
+                    i.icon.fas.fa-chevron-right
+                    
+            a(href="#", class="active gray-text")= page.pageTitle

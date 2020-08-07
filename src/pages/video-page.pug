@@ -1,0 +1,51 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'news',
+            pageTitle: 'Видео и брошюры о вузе',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Международные студенты',
+                    href: '/'
+                }
+            ],
+            videoBlock: {
+                name: 'Видео об университете'
+            }
+        }
+
+append styles
+    each fontURL in assets.page.news.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/broshyury-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        .cafedra-margin-block  
+            .header-margin-block       
+                h1.header= page.videoBlock.name  
+                hr.header-block-line
+            .video-block
+                iframe(src="https://www.youtube.com/embed/cdfMgotGKIM", frameborder="0",allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",width="100%",height="100%",allowfullscreen)
+
+        .cafedra-margin-block  
+            .header-margin-block
+                h1.header Брошюры  
+                hr.header-block-line
+
+            a(href="#", class="blue-text-btn dp-table") Брошюра 1 
+            a(href="#", class="blue-text-btn dp-table") Брошюра 2

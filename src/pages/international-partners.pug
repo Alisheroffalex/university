@@ -1,0 +1,113 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'cafedra',
+            pageTitle: 'Международные партнерские организации',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Деятельность',
+                    href: '/'
+                },
+                {
+                    name: 'Международные отношения',
+                    href: '/'
+                },
+            ],
+            bosses: [
+                {
+                    name: 'Korea Advanced institute of Science and Technology',
+                    country: 'Южная Корея',
+                    aboutUniver: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    img: 'kais.png',
+                    website: 'vestnik.guu.ru'
+                },
+                {
+                    name: 'Korea Advanced institute of Science and Technology',
+                    country: 'Южная Корея',
+                    aboutUniver: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    img: 'kais.png',
+                    website: 'vestnik.guu.ru'
+                },
+                {
+                    name: 'Korea Advanced institute of Science and Technology',
+                    country: 'Южная Корея',
+                    aboutUniver: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    img: 'kais.png',
+                    website: 'vestnik.guu.ru'
+                },
+                {
+                    name: 'Korea Advanced institute of Science and Technology',
+                    country: 'Южная Корея',
+                    aboutUniver: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    img: 'kais.png',
+                    website: 'vestnik.guu.ru'
+                },
+                {
+                    name: 'Korea Advanced institute of Science and Technology',
+                    country: 'Южная Корея',
+                    aboutUniver: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    img: 'kais.png',
+                    website: 'vestnik.guu.ru'
+                },
+                {
+                    name: 'Korea Advanced institute of Science and Technology',
+                    country: 'Южная Корея',
+                    aboutUniver: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    img: 'kais.png',
+                    website: 'vestnik.guu.ru'
+                },
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/club-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        .personal-wrapper 
+            each person in page.bosses
+                .person-card.small-card.partner-card
+                    .row 
+                        .person-img     
+                            img(src="images/"+person.img)
+                        .person-info 
+                            h3.normal-header= person.name 
+                            
+                            .row.info-row 
+                                .col 
+                                    p.gray-text Научная степень и звание:
+                                .col-2 
+                                    p.gray-text 
+                                        b= person.country
+                            
+                            .row.info-row 
+                                .col 
+                                    p.gray-text Должность:
+                                .col-2 
+                                    p.gray-text 
+                                        b= person.aboutUniver
+
+                            .row.info-row 
+                                .col 
+                                    p.gray-text Официальный сайт:
+                                .col-2 
+                                    a(href="#").gray-text.blue-text 
+                                        b= person.website
+                            .row.info-row.responsive.center
+                                a(href="#").blue-text Подробнее

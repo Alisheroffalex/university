@@ -1,0 +1,636 @@
+@import '_partials/variables'
+
+@media screen and (max-width bpLap)
+    html 
+        font-size 16px
+    .carousel-img   
+        width 70% 
+        right -5% 
+        img 
+            width 100%
+
+    .row-grid 
+        grid-template-columns: repeat(auto-fill, 18rem);
+
+    .f-gird 
+        grid-template-columns: repeat(auto-fill, 28.833333333333332rem)
+
+
+    .services-row-grid 
+        grid-template-columns: repeat(auto-fill, 13.444444rem) ;
+
+    
+    .branch-row 
+        grid-template-columns: repeat(auto-fill, 19rem);
+        grid-auto-rows: 20.611111rem;
+
+    .about-university .university-img 
+        height 95%
+
+@media screen and (max-width bpTab) 
+    .container 
+        pl(calc((100% - 60.35rem)/2))
+        pr(calc((100% - 60.35rem)/2))
+
+    .about-university .university-img 
+        height 80%
+        top 10%
+        right 2%
+
+@media screen and (max-width bpMob) 
+    html 
+        font-size bpfsTab
+    p 
+        font-size 14px
+    .container 
+        padding-left 16px 
+        padding-right 16px
+        box-sizing border-box
+    .navbar 
+        position fixed
+        width 100%
+        top 0 
+        left 0
+        padding-left s(16)
+        padding-right s(16)
+        box-sizing border-box
+
+    
+    .logo 
+        width s(101) 
+        
+        svg     
+            width 100%
+
+    .mobile-menu-butttons  
+        display flex
+        justify-content flex-end
+    .menu  
+        .js-end 
+            display none
+    .mobile-menu-butttons 
+        .search ,
+        .burger-toggle svg
+            width s(26)
+            height s(26)
+        svg 
+            width 100%
+            height 100%
+
+    .search-div 
+        form img 
+            width s(26)
+            height s(26)
+    
+    .search-div.active .search-input 
+        width s(315)
+        transform translate(12%, -30%)
+
+    .header 
+        font-size 24px
+        line-height 32px
+
+    .header-content 
+        .header 
+            max-width 50% 
+
+    .a-header 
+        .container 
+            padding-right 0
+        
+    .carousel-img 
+        width 150%
+        right -55%
+        opacity 1
+        z-index 0
+
+    .a-header:before
+        width: 120%;
+        height: 68%;
+        top: unset;
+        bottom: 0;
+        left: 18%;
+    
+    .a-header:after 
+        width: 82%;
+        height: 46%;
+        top: unset;
+        left: 39%;
+        bottom: 11%;
+    
+    .carousel-text 
+        z-index 99
+    .carousel-text .text 
+        max-width s(250)
+    
+    .slick-dots li button 
+        height 11px
+        width 8px
+
+    .burger-wrapper 
+        position relative
+
+        .burger-toogle 
+            transition .2s
+
+        .burger-close 
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%,-50%) rotate(-50deg)
+            width s(26)
+            height 2(26)
+            opacity 0 
+            pointer-events none
+            transition .2s
+        &.active 
+            .burger-close 
+                opacity 1 
+                pointer-events unset
+                transform translate(-50%,-50%)
+                transition .2s
+            .burger-toggle
+                opacity 0 
+                pointer-events none
+
+    .no-hover:hover 
+        svg line  
+            stroke #fff 
+            
+    .navbar     
+        transition .2s
+        padding-bottom s(20)
+        background transparent 
+        box-shadow none
+        z-index 99999
+        &.active 
+            background #fff        
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.12);
+
+            .search 
+                svg path 
+                    fill #1F1F1F
+    .menu 
+        justify-content center
+    .menu-mobile 
+        display unset 
+        position fixed
+        background purpleColor
+        width 100%
+        left -100% 
+        top 87px
+        transition .2s
+        &.active 
+            left 0
+        .container 
+            padding-right s(16)
+        .mobile-ul-menu 
+        .dropdown 
+            margin 0
+            padding-top 0 
+            padding-bottom 0
+            padding-left 0
+        .col 
+            display flex
+
+        .m-menu-padding  
+            padding s(20) 0
+            border-bottom 1px solid #D6DAE4
+        .mobile-logos
+            a 
+                margin 0 s(10)
+    
+    .mobile-ul-menu 
+        z-index 999
+        height 62vh
+        overflow-x auto
+        li  
+            margin-bottom s(20)
+            
+            .dropdown-open.dropdown-menu
+                height unset 
+                opacity 1
+                pointer-events unset
+
+        a 
+            font-size 14px
+            line-height s(17) 
+            letter-spacing 0.03em 
+            color #1F1F1F
+            font-weight bold
+
+        i 
+            color #1F1F1F
+            font-size 10px
+            margin-left s(6)
+
+    .dropdown-menu:not(.lang-dropdown)
+        height 0px 
+        opacity 0 
+        list-style none
+        pointer-events none 
+        padding-left s(20) 
+        transition .2s
+        li 
+            margin 6px 0 
+        a
+            font-weight 500
+    
+    .dropdown
+
+        &:hover 
+            background transparent
+
+        ul.dropdown-menu.lang-dropdown  
+            bottom -46px
+            margin-right 10px
+    .m-social 
+        p 
+            color #1f1f1f
+        a 
+            margin 0 s(10)
+            svg path 
+                fill blueBtn
+
+    .navbar.active ,
+    .navbar.black-mode 
+        .burger-toggle 
+            svg line 
+                stroke #1f1f1f
+
+    .main-page-news.main-news 
+        padding-top s(64)
+        padding-bottom s(64)
+
+        .card  
+            // max-width s(300)
+            margin-right 10px
+
+    .category-panel 
+        flex-wrap wrap
+        a   
+            font-size 12px
+        li
+            margin-bottom 10px
+
+    .main-news .row-grid 
+        padding-bottom 0
+
+        .slick-list  
+            padding-bottom 30px
+    
+    .about-university 
+        margin 0 0 
+
+    .about-university .university-img 
+        position relative
+
+    .responsive 
+        display unset
+    .desktop 
+        display none
+
+    .mobile-university-img 
+        width 100%
+        margin-bottom 30px
+        border-radius 5px
+    .btn 
+        font-size 14px
+        padding 14px 43px
+
+    .text 
+        font-size 14px
+    .f-gird
+        grid-template-columns: repeat(auto-fill, 100%)
+        grid-auto-rows: 200px;
+        .faculty-box 
+            z-index 0
+    .f-gird .faculty-box .faculty-overlay
+        z-index -1
+        object-fit cover
+
+    .faculty-box 
+        .btn 
+            padding 7px 12px
+
+    .about-university .university-text
+        max-width 100%
+    
+    .small-header 
+        font-size: 14px;
+        line-height: 22px;
+
+    
+
+    .services-row-grid 
+        grid-template-columns: repeat(auto-fill, 100%);
+        grid-auto-rows: 141px;
+        .service-box
+            flex-direction row
+            box-sizing border-box
+            padding-left s(20)
+            padding-right s(20)
+
+            img     
+                margin 0
+                width 62px
+                height auto
+            .medium-header  
+                text-align left
+                margin-left s(35)
+
+    .services 
+        margin 0
+
+    .bigCard 
+        display none
+    
+    .card-list 
+        margin 0
+        overflow-y unset    
+        overflow hidden
+        height unset
+        
+    .card-type-2  
+        flex-direction column
+        border-radius: 5px;
+        
+        background: #fff;
+        box-shadow: 0px 0px 20px rgba(117,115,137,0.22);
+        border-bottom 0px
+        padding 0 0 0 0 !important
+        margin-bottom 20px
+        margin-right 10px
+        img.card-type-img     
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: 100%;
+            height: 197px;
+            object-fit: cover;
+
+        .card-body 
+            padding: 1.111111111111111rem 1.388888888888889rem;
+
+            .row 
+                border-top 1px solid #f1f0f0 
+                padding-top 1.111111111111111rem
+
+    .f-logo 
+        width s(123)
+
+    .first-col-row-footer 
+        flex-wrap wrap
+        align-items flex-center 
+        justify-content space-between
+        .f-col 
+            order 1 
+            margin-bottom s(30)
+        .f-social 
+            order 2
+            
+
+        .address-col 
+            order 3
+
+    .f-navigation 
+        flex-direction column
+
+
+        .f-col ,
+        .f-small-col 
+            width 100%
+            margin-bottom 20px
+
+        .small-header 
+            font-size 14px 
+
+            i 
+                font-size 12px
+                margin-left s(10)
+
+        .f-small-col  
+            margin-left 0px
+
+        .f-dropdown  
+            padding-left 20px 
+            height 0 
+            opacity 0 
+            pointer-events none
+            transition .2s
+
+            a 
+                font-size 14px !important 
+                margin-bottom 12px
+                line-height: 20px !important;
+
+        div.active 
+            .f-dropdown 
+                pointer-events unset 
+                opacity 1 
+                height unset
+    i.icon.fas.fa-chevron-down.responsive
+        display unset
+
+    .a-footer .footer-footer 
+        margin-top s(30)
+        text-align left
+
+    .a-footer .f-small-col
+        max-width unset
+
+    .category-panel i 
+        font-size s(12)
+        margin-left 0px 
+        width s(15)
+        text-align center
+
+    .breadcumbs 
+        margin-top s(150)
+    .gray-text 
+        font-size 14px
+        line-height 20px 
+        i 
+            font-size 9px
+    .row-grid   
+        grid-template-columns repeat(auto-fill, 100%)
+    
+    .banner 
+        background-position center 
+        background-size cover
+        height 107px
+        .header 
+            font-size 14px 
+            line-height 22px
+
+    p 
+        font-size 14px 
+        line-height 20px
+    .post-content.the-content 
+        h1 
+            font-size: 14px
+            line-height: 22px
+        p 
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+
+        img 
+            width 100%
+            height 196px
+            object-fit cover
+            border-radius 5px
+
+    .the-content 
+        margin 45px 0
+        
+
+    .blue-text-btn
+        font-size 14px 
+        line-height 22px
+        padding-left 60px
+    
+    .person-card 
+        padding 20px
+        .row   
+            width 100%
+            flex-direction column
+
+            .info-row 
+                .col 
+                    flex-basis unset
+                    margin-bottom 7px
+                .col-2 
+                    padding-bottom 7px
+
+            .person-img 
+                width 137px 
+                height 151px 
+                align-self center 
+                img 
+                    border-radius 5px
+            .person-info 
+                margin-left 0px
+
+                .normal-header 
+                    text-align center
+                    padding 25px
+
+            .info-row.center.responsive 
+                border-bottom 0px
+                a   
+                    font-size 14px
+                    line-height 20px 
+                    font-weight bold
+    .medium-header,
+    .normal-header 
+        font-size 16px
+        line-height 22px
+
+    .person-card .info-row:not(:first-of-type) 
+        margin-bottom 15px
+
+    .responsive.center 
+        display flex
+
+    .mobile-slider-news 
+        .card   
+            margin-right 10px
+        .card-footer  
+            .gray-text  
+                font-size 12px
+
+    .faculty-card 
+        padding 20px 15px
+        overflow hidden
+        border-radius 5px
+        .faculty-img 
+            width 100%
+            height auto
+            position relative
+            top 
+            left    
+            bottom unset
+            right -20px
+    .faculty-card .medium-header .badge 
+        position relative
+        top unset 
+        right unset 
+        transform unset
+        display table 
+        margin 5px 0
+    .black-mode 
+        .mobile-ul-menu .dropdown-menu
+            background transparent
+
+    .person-card.personal .person-img 
+        width 187px 
+        height 234px
+
+    .branch-row 
+        grid-template-columns repeat(auto-fill, 100%)
+        grid-auto-rows minmax(141px, auto)
+
+        .branch-box 
+            padding-top 25px
+            padding-bottom 25px
+            display flex
+            box-sizing border-box
+            align-items center
+            text-align left
+            .medium-header 
+                flex-grow 1
+            .branch-box-img 
+                margin 0px
+                width 62px
+                margin-right s(50)
+                justify-content flex-start
+                img 
+                    width auto
+                    max-width 60px
+        
+        .big-box.branch-box
+            padding 3.5rem 1.111111111111111rem
+            padding-top 25px
+            padding-bottom 25px
+            grid-column 1
+            grid-row  span  max-content
+            .branch-box-img  
+                width 62px
+                margin-right s(50)
+
+    .journal-row
+        flex-direction column
+        align-items center
+        border-bottom 1px solid #D6DAE4
+        margin-bottom 50px
+        padding-bottom 20px
+        .journal-img 
+            width 140px
+            height 206px
+            margin-bottom 15px
+        .responsive 
+            .badge 
+                margin-left 5px
+
+
+    .person-card.no-image 
+        .normal-header 
+            padding 0 25px
+            text-align center
+        .info-row 
+            .col 
+                flex-basis 0
+    .person-card.partner-card   
+        .person-img 
+            width 151px
+            height 151px
+        
+    .person-card.project-card
+        .person-img 
+            width 100%
+            height 151px
+    .card-overlay  
+        display none
+
+    #map 
+        margin-top 30px

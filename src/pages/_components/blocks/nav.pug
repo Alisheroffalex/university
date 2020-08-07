@@ -1,0 +1,135 @@
+#overlay
+nav(class=page.name === 'home' ? '' : 'black-mode').navbar
+    .logo
+        a(href="/") 
+            include ../../../../dist/images/logo.svg   
+    .menu
+        .js-end.links-wrapper
+            .row.uzb-logos
+                each val in header.uzbLogos 
+                    a(href=val.href)
+                        img(src='/images/'+val.src)
+            .dropdown
+                .dropdown-text 
+                    img(src="/images/global.svg")
+                    span.gray-text Ru
+                    i.icon.fas.fa-chevron-down
+
+                ul.dropdown-menu    
+                    li
+                        a(href="#").gray-text En
+                    li
+                        a(href="#").gray-text En
+            a(href="#").sp-link
+                img(src="/images/eye.svg")
+                span.gray-text Специальные возможности
+                
+        .js-end 
+            ul.navigation.nav-start
+                each link in header.menu 
+                    li
+                        a(href=link.href)= link.title  
+
+                        if link.dropdown 
+                            ul.dropdown-menu  
+                                each item in link.dropdown 
+                                    li 
+                                        a(href=item.href)= item.title 
+                                            if item.dropdown 
+                                                i.icon.fas.fa-chevron-right
+                                    
+                                        if item.dropdown 
+                                            ul.dropdown-menu.dropdown-level2    
+                                                each link in item.dropdown 
+                                                    li 
+                                                        a(href=link.href)= link.title 
+
+
+            ul.navigation.nav-end
+                li.no-hover
+                    a(href="javascript:void(0)").search-div
+                        .search
+                            include ../../../../dist/images/search.svg
+                        form(action="#", method="POST")
+                            input(type="text" class="search-input", placeholder="Введите запрос")
+                            button(class="search-icon", type="submit")
+                                img(src="images/search.svg")
+
+                li    
+                    a(href="javascript:void(0)").burger
+                        .burger-icon 
+                            include ../../../../dist/images/burger.svg
+                            span Другое
+                    ul.dropdown-menu 
+                        li 
+                            a(href="#") dasdasd
+        .mobile-menu-butttons 
+            ul.navigation.nav-end
+                li.no-hover
+                    a(href="javascript:void(0)").search-div
+                        .search
+                            include ../../../../dist/images/search.svg
+                        form(action="#", method="POST")
+                            input(type="text" class="search-input", placeholder="Введите запрос")
+                            button(class="search-icon", type="submit")
+                                img(src="images/search.svg")
+                li.no-hover.burger-wrapper   
+                    a(href="javascript:void(0)").burger-toggle
+                        include ../../../../dist/images/burger.svg   
+                    .burger-close   
+                        include ../../../../dist/images/close.svg   
+    .menu-mobile 
+        .container 
+            .row.sp-between.m-menu-padding 
+                .col    
+                    .dropdown
+                        .dropdown-text 
+                            img(src="/images/global.svg")
+                            span.gray-text Ru
+                            i.icon.fas.fa-chevron-down
+
+                        ul.dropdown-menu.lang-dropdown    
+                            li
+                                a(href="#").gray-text En
+                            li
+                                a(href="#").gray-text En
+                    a(href="#").sp-link
+                        img(src="/images/eye.svg")
+
+                .col.mobile-logos
+                    each val in header.uzbLogos 
+                        a(href=val.href)
+                            img(src='/images/'+val.src)
+
+            .m-menu-padding 
+                ul.mobile-ul-menu 
+                    each link in header.menu 
+                        li
+                            a(href=link.href)= link.title  
+                            if link.dropdown 
+                                i.icon.fas.fa-chevron-down
+                            if link.dropdown 
+                                ul.dropdown-menu  
+                                    each item in link.dropdown 
+                                        li 
+                                            a(href=item.href)= item.title 
+                                            if item.dropdown 
+                                                i.icon.fas.fa-chevron-down
+                                        
+                                            if item.dropdown 
+                                                ul.dropdown-menu  
+                                                    each link in item.dropdown 
+                                                        li 
+                                                            a(href=link.href)= link.title 
+            .m-menu-padding.m-social
+                .row.sp-between 
+                    .col 
+                        p Мы в соцсетях:
+                    .col.mobile-social-links 
+                        a(href="#")
+                            include ../../../../dist/images/instagram.svg   
+                        a(href="#")
+                            include ../../../../dist/images/vk.svg   
+                        a(href="#")
+                            include ../../../../dist/images/twitter.svg   
+                        

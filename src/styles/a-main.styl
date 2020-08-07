@@ -1,2 +1,684 @@
 @import '_partials/variables'
 @import '_partials/reset'
+@import '/fonts/gilroy/gilyor.css'
+
+* 
+    outline none !important
+html 
+    font-size 18px
+    font-family 'Gilroy', sans-serif
+
+.container 
+    pl(calc((100% - 63.35rem)/2))
+    pr(calc((100% - 63.35rem)/2))
+
+.row 
+    display flex
+
+.gray-text 
+    font-family 'Gilroy'
+    font-style normal
+    font-weight 400
+    font-size s(14)
+    line-height: s(16)
+    letter-spacing 0.03em
+    color grayColor
+
+.header 
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: bold;
+    font-size: s(38);
+    line-height: s(48);
+    letter-spacing: 0.03em;
+
+.text 
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 300;
+    font-size: s(16);
+    line-height: s(28);
+    letter-spacing: 0.03em;
+
+.btn 
+    font-family 'Gilroy'
+    padding s(14) s(43);
+    font-weight: bold;
+    font-size: s(14);
+    line-height: s(17);
+    background: blueBtn;
+    border-radius: 5px;
+    letter-spacing: 0.03em;
+    display inline-block
+    color #fff
+    position relative
+    overflow hidden
+    // transition .1s ease
+    &:hover 
+        transform translate(s(2),s(-2))
+
+.header-block-line 
+    border-bottom 3px solid blueBtn
+    max-width s(124)
+    margin s(13) 0 s(13) 0
+
+.row-grid
+    display grid
+    grid-template-columns repeat(auto-fill, s(360))
+    justify-content center
+    grid-gap 30px 30px
+
+.badge 
+    padding s(5) s(12)
+    background blueBtn
+    border-radius 5px
+    color #fff
+.card 
+    border-radius 5px
+    background #fff
+    box-shadow 0px 0px 20px rgba(117, 115, 137, 0.22)
+    .card-img 
+        border-top-left-radius 5px 
+        border-top-right-radius 5px
+        width 100%
+        height 197px
+        object-fit cover
+
+    .card-body 
+        min-height 90px
+        border-bottom 1px solid #F1F0F0
+        overflow hidden
+        
+        position relative
+
+    .badge 
+        padding s(5) s(12)
+        background blueBtn
+        border-radius 5px
+        position absolute
+        top -20px
+        right 10%
+        transition .2s ease
+        color #fff
+        animation fadeOutLeft .5s ease forwards
+
+    .card-container 
+        padding s(20) s(25)
+        position relative
+
+    .card-footer 
+        padding-top s(20)
+
+    .small-header 
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow hidden
+
+    &:hover .badge 
+        animation fadeInLeft .5s ease forwards
+
+.small-header 
+    font-weight: bold
+    font-size: s(14)
+    line-height: s(22)
+    letter-spacing: 0.03em
+    color #000 
+
+
+.sp-between 
+    justify-content space-between
+
+.medium-header  
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: s(24);
+    line-height: s(32);
+    letter-spacing: 0.03em;
+
+.btn-gray 
+    background grayColor
+    transition background .2s ease
+
+    &:hover 
+        background blueBtn 
+
+.f-gird 
+    display grid
+    grid-template-columns repeat(auto-fill, s(555))
+    grid-auto-rows s(292)
+    justify-content center
+    grid-gap 30px 30px 
+
+    .faculty-box 
+        background #ECF0FB
+        border-radius 5px
+        position relative
+
+        .faculty-overlay 
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+            pointer-events none
+
+a.small-header:hover 
+        color blueBtn 
+
+.bigCard 
+    max-width s(458)
+
+    .card-img     
+        width 100% 
+        height s(375)
+
+.card-type-2
+    display flex
+    flex-direction row
+    align-items center
+    border-bottom 1px  solid grayColor
+
+    &:not(:first-child)
+        padding s(20) 0
+
+    &:first-child
+        padding 0 0 s(20) 0
+
+    .card-body
+        padding 0 s(25)
+        
+
+    .card-type-img 
+        width s(165)
+        height s(100)
+        border-radius 5px
+        object-fit cover 
+
+    .small-header 
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom s(10)
+
+.card-list 
+    overflow-y scroll
+    height s(550)
+    
+    &::-webkit-scrollbar
+        width 9px
+
+    &::-webkit-scrollbar-track
+        border-left 4px solid #fff
+        border-right 4px solid #fff
+        background grayColor
+
+
+    &::-webkit-scrollbar-thumb
+        border-left 0px solid blueBtn
+        border-right 0px solid blueBtn
+        background blueBtn 
+        border-radius 5px
+    
+    &::-webkit-scrollbar-button
+        background grayColor
+        border-radius 50%
+        height 10px
+
+.category-panel 
+    margin-top s(29)
+
+.category-panel 
+    a 
+        font-weight: bold
+        font-size: s(14)
+        line-height: s(22)
+        color grayColor
+
+        &:hover,
+        &.active 
+            color blueBtn
+    i 
+        font-size s(10)
+        color grayColor
+        margin-left 6px
+    li 
+        margin-right s(23)
+
+.center 
+    display flex 
+    justify-content center 
+    align-items center 
+    width 100%
+
+.banner 
+    background-size cover
+    background-repeat no-repaet
+    color #fff 
+    text-align center 
+    height s(342)
+    position relative 
+
+    .overlay 
+        position absolute
+        top 0
+        left 0 
+        height 100% 
+        width 100% 
+        background rgba(0,0,0,.5)
+        display flex 
+
+    .container 
+        display flex 
+        flex-direction column 
+        justify-content center
+        align-items center 
+        position relative
+        width s(1140)
+        
+
+        hr.white 
+            width s(128)
+            border-color #fff
+
+        a   
+            color #fff
+
+.the-content
+    margin-top s(68)
+    margin-bottom s(120)
+.post-content
+    margin-top s(68)
+    margin-bottom s(120)
+    h1:not(.header)
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: bold;
+        font-size: s(24);
+        line-height: s(48);
+        letter-spacing: 0.03em;
+        margin-bottom s(14)
+    p:not(.gray-text) 
+        font-size: s(16);
+        line-height: s(30);
+        color #1F1F1F
+    
+    img     
+        width s(761)
+        height s(458)
+        object-fit cover
+        margin s(14) 0 s(28) 0
+
+.purple-section 
+    background purpleColor
+
+.blue-text-btn
+    font-size s(14)
+    line-height s(22)
+    color blueBtn
+    font-weight bold
+    padding-left s(50)
+    position relative
+
+    &:before    
+        content ''
+        height 2px 
+        width 35px 
+        background blueBtn
+        position absolute 
+        left 0%
+        top 50%
+        transition .3s ease 
+    &:hover:before  
+        left 5%
+
+
+.person-card  
+    background purpleColor
+    padding s(40) 
+    border-radius 5px
+    .person-img 
+        width s(240)
+        height s(346)
+
+        img 
+            width 100%
+            height 100% 
+            object-fit cover 
+
+    .person-info
+        flex-grow 1
+        margin-left s(40)
+        
+
+    .info-row 
+        border-bottom 1px solid #D6DAE4
+        padding-bottom s(10)
+        .col 
+            flex-basis s(275)
+
+        &:not(:first-of-type) 
+            margin-top s(27)
+
+        &:first-of-type
+            margin-top s(19)
+
+        .gray-text 
+            color #787C87
+
+        b 
+            color #1F1F1F
+
+
+.normal-header 
+    font-style: normal;
+    font-weight: bold;
+    font-size: s(24);
+    line-height: s(32);
+
+
+b 
+    font-weight bold
+
+.person-card  
+    margin-top s(40)
+
+.personal-wrapper 
+    margin-bottom s(120)
+
+.w-normal 
+    font-weight 500
+
+.faculty-card 
+    padding s(43) s(50)
+    background purpleColor
+    min-height s(404)
+    box-sizing border-box
+    position relative
+    margin-bottom s(40)
+    
+
+    .medium-header 
+        max-width s(480)
+        position relative
+        display inline-block
+        .badge 
+            font-size s(16)
+            position absolute
+            right s(-40)
+            top 50%
+            transform translate(50%,-50%)
+
+            
+
+    .faculty-img 
+        position absolute
+        right 0
+        bottom 0
+        z-index 0
+        height 90%
+        pointer-events none     
+
+.blue-text-btn-type
+    display table
+    margin-top s(20)
+    &:before 
+        top s(10)
+    &:hover:before 
+        left s(10)
+
+.blue-text-btn-type
+    max-width s(450)
+
+.cafedra-margin-block
+    margin-bottom s(85)
+
+
+.facultet-row 
+    margin-bottom s(20) 
+    .blue-text 
+        margin-right s(36)
+
+.blue-text 
+    color blueBtn
+
+.bold 
+    font-weight bold
+
+p.blue-text-btn 
+    color #1F1F1F
+
+    &:hover:before
+        left 0
+
+.blue
+    color blueBtn
+
+.margin-small-block 
+    margin-bottom s(30)
+
+.blue-text-btn-type.longer
+    max-width 100%
+
+.person-info 
+    max-width s(782)
+
+    .col-2 
+        max-width s(499)
+
+
+.person-card
+    position relative
+
+    .card-overlay 
+        position absolute
+        width 100%
+        height 100%
+        top 0
+        left 0
+        background rgba(236, 240, 251,.5)
+        transition .5s
+        animation zoomOut .4s forwards
+    &:hover .card-overlay 
+        animation zoomIn .4s forwards
+        
+.small-card 
+    .person-img 
+        height s(250)
+
+.person-card.personal 
+    background transparent 
+    padding 0
+
+    .person-img 
+        width s(360)
+        height s(452)
+
+.branch-row 
+    display grid 
+    grid-template-columns repeat(auto-fill, s(360))
+    grid-template-columns 
+    justify-content center
+    grid-auto-rows: s(299)
+    grid-gap 30px 30px  
+
+    .big-box 
+        grid-column span 2
+        padding-left s(120)
+        padding-right s(120)
+
+
+.branch-box 
+    background purpleColor
+    padding s(63) s(20)
+    text-align center 
+    color #1F1F1F
+
+    .branch-box-img     
+        height s(80)
+        margin-bottom s(28)
+        display flex 
+        align-items flex-end 
+        justify-content center
+
+    &:hover 
+        color blueBtn
+
+.journal-row 
+    margin-bottom s(40)
+.row-text 
+    flex-grow 1
+    padding-left s(30)
+
+    .medium-header 
+        color #1F1F1F
+        display table
+        &:hover 
+            color blueBtn
+        .badge 
+            font-size s(16)
+            margin-left s(20)
+.journal-img
+    width s(263)
+    height s(387)
+
+.badge-date 
+    background blueBtn 
+    color #fff 
+    border-radius 5px
+    padding s(5) s(11) 
+.card-footer 
+    align-items center
+
+
+.extra-small 
+    .person-img
+        width s(190)
+        height s(190)
+
+.cafedra-margin-block
+    ul 
+        padding-left s(20)
+
+.no-image 
+    .person-info  
+        margin-left s(0)
+        padding-left s(0)
+.project-card,
+.partner-card 
+    .person-img 
+        width s(240)
+        height s(240)
+
+    .info-row 
+        .blue-text.gray-text    
+            b
+                color blueBtn
+
+.project-card 
+    .person-img    
+        width s(319)
+        height s(390)
+
+    .info-row .col
+        max-width s(203)
+
+.header-margin-block
+    margin-bottom s(30)
+
+.blue-text-btn.dp-table 
+    display table
+    margin-bottom s(15)
+.video-block
+    height s(570)
+
+
+
+.small-no-image-card 
+    width 100%
+    margin-top 0
+    box-sizing border-box
+    .normal-header  
+        margin-bottom s(30)
+    .info-row
+        .col  
+            width s(90)
+            flex-basis unset
+
+        .col-2 
+            max-width s(276)
+        .blue-text 
+            b 
+                color blueBtn
+.contact-row
+    flex-wrap wrap
+    .col-4 
+        width s(458)
+
+    .col-6 
+        width s(652)
+
+#map 
+    width 100% 
+    height s(300)
+
+label   
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: s(16);
+    line-height: s(19);
+    letter-spacing: 0.03em;
+    color: #787C87;
+    margin-bottom s(16)
+    display table
+.form-group 
+    width 100%
+    margin-bottom s(25)
+input ,
+textarea
+    display block
+    width 100%
+    box-sizing border-box
+    border none 
+    border-radius 5px
+    padding s(18) s(28) 
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: s(16);
+    line-height: s(30);
+    letter-spacing: 0.03em; 
+    border: 2px solid purpleColor
+    color: #1F1F1F;
+    background purpleColor
+    transition border-color .2s ease 
+textarea    
+    height s(258)
+
+button.btn 
+    border none 
+    cursor pointer
+    font-family: 'Gilroy';
+
+.warning
+    border-color rgba(255,0,0,.22);
+
+.menu-mobile ,
+.mobile-menu-butttons  
+    display none
+    
+i.icon.fas.fa-chevron-down.responsive,
+.responsive
+    display none
+
+.f-dropdown
+    list-style none
+
+.faculty-box .medium-header
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;

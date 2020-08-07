@@ -1,0 +1,10 @@
+mixin services 
+    .container.services
+        h1.header= page.serviceBlocktitle
+        hr.header-block-line 
+
+        .services-row-grid  
+            each service in page.services   
+                a(href=service.href).service-box
+                    img(src="images/"+service.img)
+                    h2.medium-header= service.name

@@ -1,0 +1,34 @@
+mixin news 
+    section.news.container 
+        .header-block
+            h1.header= newsSection.blockTitle
+            hr.header-block-line 
+        .row.sp-between
+            .card.bigCard
+                img(src="images/"+newsSection.mainNews.img, alt=newsSection.title, class="card-img")
+
+                .card-container
+                    a(href='#')
+                        i.fas.fa-angle-double-right.badge
+
+                    .card-body 
+                        a(href='#').small-header= newsSection.mainNews.title
+
+                    .card-footer.row.sp-between 
+                        span.gray-text= newsSection.mainNews.date 
+
+                        a(href="#").gray-text=newsSection.mainNews.category
+            .card-list 
+                each news in newsSection.news 
+                    .card-type-2    
+                        img(src="images/"+news.img).card-type-img
+
+                        .card-body
+                            a(href="#", class="small-header")= news.title
+                            .row.sp-between
+                                span.gray-text=news.date 
+                                a(href="#", class="gray-text") Жизнь университета
+
+
+
+            

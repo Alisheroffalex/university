@@ -1,0 +1,302 @@
+@import '_partials/variables'
+
+.navbar 
+    padding-top s(21)   
+    display flex
+    flex-direction row
+    z-index 9999
+
+.menu 
+    display flex
+    flex-direction column
+    flex-grow 1
+    justify-content space-between
+    z-index 999
+
+    .js-end:nth-child(2) 
+        margin-top s(16)
+.js-end 
+    display flex
+    justify-content flex-end
+    align-items center
+
+.uzb-logos a 
+    align-self center
+    padding 0 s(13) 0 0
+    transition .1s ease
+
+    &:hover 
+        opacity .8
+
+.dropdown 
+    margin 0 s(20) 0 s(20)
+    cursor pointer
+    position relative
+    padding s(10)
+    &:hover 
+        background #fff
+    .dropdown-menu 
+        position absolute
+        width 100%
+        background #fff
+        bottom -70px
+        pointer-events none
+        left 0
+        opacity 0
+        z-index 9999
+        transition .2s ease
+        
+        li 
+            list-style none 
+            display block
+            width 100%
+            bpxbox-sizing border-box
+            padding s(5) 0 s(5) 0
+            text-align center
+
+            a 
+                color #1F1F1F
+            &:hover 
+                background purpleColor 
+
+    .gray-text 
+        margin 0 s(3) 0 s(8)
+
+    .dropdown-text  
+        display flex
+        align-items: center
+
+        .icon 
+            font-size s(10)
+            color grayColor
+            transition .1s ease
+
+    &:hover 
+        .icon   
+            transform rotate(180deg)
+
+    &:hover .dropdown-menu 
+        bottom -55px
+        opacity 1
+        pointer-events unset
+
+.sp-link
+    display flex
+    align-items center
+
+    img 
+        mr(s(8))
+
+.navigation
+    display flex
+    z-index 9
+
+    
+    li 
+        list-style none
+        padding s(9) s(18) s(9) s(18)
+        position relative
+
+        .dropdown-menu 
+            position absolute
+            top 102%
+            left 0px
+            opacity 0
+            pointer-events none
+            width s(259)
+            background #ffffff
+            padding s(17) 0 
+            border-radius 5px
+            z-index 999
+            
+
+            li 
+                position relative
+                
+                .dropdown-level2 
+                    left 100%
+                    top -45%
+                    opacity 0
+                    pointer-events none
+                    border-top-left-radius 0px
+                    border-bottom-left-radius 0px
+               
+                &:hover 
+                    background purpleColor
+                    border-radius unset
+
+                    .dropdown-level2  
+                        opacity 1 
+                        pointer-events unset
+                    
+                a 
+                    color #1F1F1F
+                    i 
+                        font-size s(12)
+                        margin-left s(5)
+                
+
+
+        &:hover 
+            background #ffffff
+            border-radius 5px
+
+            .dropdown-menu 
+                opacity 1
+                pointer-events unset
+
+            a 
+                color blueBtn
+
+            line 
+                stroke blueBtn
+                
+
+    a 
+        font-family 'Gilroy'
+        font-style normal
+        font-weight bold
+        font-size 14px
+        line-height 17px
+        letter-spacing: 0.03em
+        color #FFFFFF 
+
+        
+
+
+        
+.nav-end 
+    margin-left s(78)
+
+    a:not(:first-child) 
+        margin-left s(23)
+        
+        img 
+            margin-right s(8)
+
+.black-mode 
+    a 
+        color #000
+        &:hover 
+            color blueBtn
+
+            img     
+                opacity 1
+
+    .dropdown-menu
+        background rgba(255,255,255,.9)
+
+
+.breadcumbs 
+    margin s(53) 0 s(38) 0
+
+    .gray-text 
+        font-weight 500
+        margin-right s(10)
+        display inline-block
+        margin-bottom s(10)
+        &.active    
+            color #000
+
+        i 
+            margin-left s(10)
+
+#overlay 
+    width 100% 
+    height 100%
+    position fixed 
+    top 0 
+    left 0
+    background rgba(3, 35, 74, .7)
+    z-index 999
+    opacity 0 
+    pointer-events none 
+    transition .2s
+.search-div
+    position relative
+    z-index 99999 
+    .search-icon
+        z-index 99999   
+        padding s(8) 
+        background blueBtn 
+        border-radius 5px
+        position absolute
+        left 0px
+        top 0px 
+        transform translate(-20%,-20%)
+        pointer-events none 
+        border none 
+        outline none
+        cursor pointer
+        opacity 0 
+        transition .2s .2s
+    .search-input 
+        z-index 99999
+        position absolute
+        padding s(14) s(20) 
+        box-sizing border-box
+        width s(428)
+        right 0px
+        top 0px
+        transform translate(10%,-35%)
+        opacity 0 
+        pointer-events none
+        width 0
+        transition .2s
+
+.search-div.active 
+    .search-input 
+        width s(428)
+        opacity 1 
+        pointer-events unset
+
+    .search-icon 
+        opacity 1 
+        pointer-events unset 
+
+#overlay.active 
+    opacity 1
+    pointer-events unset
+
+.black-mode  
+    .search-div 
+        svg 
+            path 
+                fill #1F1F1F
+
+.burger-icon
+    svg 
+        margin-right s(5)
+.black-mode
+    .burger-icon
+        line
+            stroke #1F1F1F
+
+        &:hover 
+            line
+                stroke blueBtn
+
+.burger 
+    position relative
+.burger-icon.active 
+    position absolute 
+    width s(295)
+    background #fff
+
+.burger-menu
+    position absolute
+    top 0px
+    transform translate(-0,-20%)
+    right 0px
+    width s(295)
+    background #fff 
+    color blueBtn 
+    padding s(9) s(4)
+    border-radius 5px
+
+    line 
+        stroke blueBtn
+
+ul.navigation li.no-hover:hover 
+    background transparent
+

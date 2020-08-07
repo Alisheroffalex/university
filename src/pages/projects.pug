@@ -1,0 +1,125 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'cafedra',
+            pageTitle: 'Текущие проекты',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Деятельность',
+                    href: '/'
+                },
+                {
+                    name: 'Международные отношения',
+                    href: '/'
+                },
+            ],
+            bosses: [
+                {
+                    name: 'Проект «GREB» программы Erasmus+',
+                    members: '16 университетов и организаций из Европы (Италия, Испания, Швеция, Австрия, Словения), России, Узбекистана и Монголии.',
+                    coordinate: 'Профессор Анна Тоцци - проректор Университета Л’Акуила (Италия).',
+                    img: 'project.png',
+                    deadline: 'Начало - 15 октября 2016 года, конец – 15 октября 2020 года',
+                    about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    website: 'vestnik.guu.ru',
+                    href: '#'
+                },
+                {
+                    name: 'Проект «GREB» программы Erasmus+',
+                    members: '16 университетов и организаций из Европы (Италия, Испания, Швеция, Австрия, Словения), России, Узбекистана и Монголии.',
+                    coordinate: 'Профессор Анна Тоцци - проректор Университета Л’Акуила (Италия).',
+                    img: 'project.png',
+                    deadline: 'Начало - 15 октября 2016 года, конец – 15 октября 2020 года',
+                    about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    website: 'vestnik.guu.ru',
+                    href: '#'
+                },
+                {
+                    name: 'Проект «GREB» программы Erasmus+',
+                    members: '16 университетов и организаций из Европы (Италия, Испания, Швеция, Австрия, Словения), России, Узбекистана и Монголии.',
+                    coordinate: 'Профессор Анна Тоцци - проректор Университета Л’Акуила (Италия).',
+                    img: 'project.png',
+                    deadline: 'Начало - 15 октября 2016 года, конец – 15 октября 2020 года',
+                    about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    website: 'vestnik.guu.ru',
+                    href: '#'
+                },
+                {
+                    name: 'Проект «GREB» программы Erasmus+',
+                    members: '16 университетов и организаций из Европы (Италия, Испания, Швеция, Австрия, Словения), России, Узбекистана и Монголии.',
+                    coordinate: 'Профессор Анна Тоцци - проректор Университета Л’Акуила (Италия).',
+                    img: 'project.png',
+                    deadline: 'Начало - 15 октября 2016 года, конец – 15 октября 2020 года',
+                    about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur',
+                    website: 'vestnik.guu.ru',
+                    href: '#'
+                }
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/club-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        .personal-wrapper 
+            each person in page.bosses
+                .person-card.project-card
+                    .row 
+                        .person-img     
+                            img(src="images/"+person.img)
+                        .person-info 
+                            h3.normal-header= person.name 
+                            
+                            .row.info-row 
+                                .col 
+                                    p.gray-text Участники проекта:
+                                .col-2 
+                                    p.gray-text 
+                                        b= person.members
+                            
+                            .row.info-row 
+                                .col 
+                                    p.gray-text Координатор проекта:
+                                .col-2 
+                                    p.gray-text 
+                                        b= person.coordinate
+                            
+                            .row.info-row 
+                                .col 
+                                    p.gray-text Срок выполнения:
+                                .col-2 
+                                    p.gray-text 
+                                        b= person.deadline
+
+                            .row.info-row 
+                                .col 
+                                    p.gray-text О проекте:
+                                .col-2 
+                                    p.gray-text 
+                                        b= person.about
+
+                            .row.info-row 
+                                .col 
+                                    p.gray-text Официальный сайт:
+                                .col-2 
+                                    a(href="#").gray-text.blue-text 
+                                        b= person.website
+                            .row.info-row.responsive.center
+                                a(href="#").blue-text Подробнее

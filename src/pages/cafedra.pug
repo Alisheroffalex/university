@@ -1,0 +1,143 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'cafedra',
+            pageTitle: 'Начальство',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Структура ВУЗа',
+                    href: '/'
+                }
+            ],
+            bosses: [
+                {
+                    name: 'Ректор',
+                    person: [
+                        {
+                            name: 'Мансуров Азаз Турдимуратович',
+                            degrees: 'Профессор',
+                            job: 'Ректор',
+                            img: 'rektor.png',
+                            workingDays: [
+                                'Суббота (с 10.00 до 12.00)'
+                            ],
+                            phone: '+998 71 244-53-20',
+                            email: 'rektor@transportun.uz'
+                        }
+                    ]
+                },
+                {
+                    name: 'Проректоры',
+                    person: [
+                        {
+                            name: 'Гафурова Саера Турдимуратовна',
+                            degrees: 'Профессор',
+                            job: 'Проректор',
+                            img: 'prorektor1.png',
+                            workingDays: [
+                                'Суббота (с 10.00 до 12.00)'
+                            ],
+                            phone: '+998 71 244-53-20',
+                            email: 'rektor@transportun.uz'
+                        },
+                        {
+                            name: 'Уринбаев Аваз Максудович',
+                            degrees: 'Профессор',
+                            job: 'Проректор',
+                            img: 'prorektor2.png',
+                            workingDays: [
+                                'Суббота (с 10.00 до 12.00)',
+                                'Пятница (с 10.00 до 12.00)',
+                                'Суббота (с 10.00 до 12.00)'
+                            ],
+                            phone: '+998 71 244-53-20',
+                            email: 'rektor@transportun.uz'
+                        }
+                    ]
+                }
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/lesson-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        each boss in page.bosses 
+            .personal-wrapper 
+                .header-block.center 
+                    h1.header=boss.name 
+                    hr.header-block-line
+                each person in boss.person
+                    .person-card 
+                        .row 
+                            .person-img     
+                                img(src="images/"+person.img)
+                            .person-info 
+                                h3.normal-header= person.name 
+                                
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Научная степень и звание:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.degrees
+                                
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Должность:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.job
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Время приема:
+                                    .col-2 
+                                        each day in person.workingDays 
+                                            p.gray-text 
+                                                b= day
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Телефон:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.phone
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text E-mail:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.email
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Соц. сети:
+                                    .col-2 
+                                        a(href="#").social-link
+                                            img(src="images/instagram_black.svg")
+                                        a(href="#").social-link
+                                            img(src="images/vk_black.svg")
+                                        a(href="#").social-link
+                                            img(src="images/twitter_black.svg")
+                                .row.info-row.responsive.center
+                                    a(href="#").blue-text Подробнее
+                                    

@@ -1,0 +1,15 @@
+mixin university
+    section.about-university 
+        .container
+            .row.sp-between 
+                .university-text 
+                    .header-block
+                        h1.header= university.blockTitle
+                        hr.header-block-line 
+                        br
+                        p.text.w-normal= university.text 
+                        img(src="images/"+university.img ).mobile-university-img.responsive
+                        a(href="#", class="btn") Подробнее
+                
+                img(src="images/"+university.img ).university-img.desktop
+

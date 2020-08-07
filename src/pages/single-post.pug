@@ -1,0 +1,76 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'single-post',
+            newsSectionTitle: 'Читайте также',
+            pageTitle: 'Преподаватели дали советы будущим студентам Российского университета транспорта',
+            categoryRemove: true,
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Новости',
+                    href: '/news.pug'
+                }
+            ],
+            newsResponsiveSlider: true,
+            news: [
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                }
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.singlepost.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.singlepost.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+                hr.header-block-line.white 
+                p.text 
+                    span 12.07.2020 / 
+                        a(href="#") Новости университета
+
+    .the-content.container.post-content
+        h1 Lorem ipsum dolor sit amet, consectetur adipiscing
+        p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Vestibulum morbi blandit cursus risus at ultrices mi. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque. Integer enim neque volutpat ac tincidunt vitae semper. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Id venenatis a condimentum vitae sapien pellentesque habitant morbi. Velit euismod in pellentesque massa placerat duis. Interdum posuere lorem ipsum dolor sit. Ornare arcu odio ut sem nulla pharetra. Justo laoreet sit amet cursus sit amet dictum sit amet. Dictum non consectetur a erat. 
+        br
+        img(src="images/content-pic.png")
+        br 
+        br  
+
+        h1 Lorem ipsum dolor sit amet, consectetur adipiscing
+        p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Vestibulum morbi blandit cursus risus at ultrices mi. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque. Integer enim neque volutpat ac tincidunt vitae semper. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Id venenatis a condimentum vitae sapien pellentesque habitant morbi. Velit euismod in pellentesque massa placerat duis. Interdum posuere lorem ipsum dolor sit. Ornare arcu odio ut sem nulla pharetra. Justo laoreet sit amet cursus sit amet dictum sit amet. Dictum non consectetur a erat. 
+        br
+        p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Vestibulum morbi blandit cursus risus at ultrices mi. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque. Integer enim neque volutpat ac tincidunt vitae semper. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Id venenatis a condimentum vitae sapien pellentesque habitant morbi. Velit euismod in pellentesque massa placerat duis. Interdum posuere lorem ipsum dolor sit. Ornare arcu odio ut sem nulla pharetra. Justo laoreet sit amet cursus sit amet dictum sit amet. Dictum non consectetur a erat. 
+
+    .purple-section 
+        .container 
+            + main-news

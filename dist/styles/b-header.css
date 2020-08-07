@@ -1,0 +1,137 @@
+.a-header {
+  background: radial-gradient(25.99% 170.33% at 25.99% 50%, #03234a 0%, #021b38 100%);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.a-header .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.a-header .container .header-carousel {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  outline: none !important;
+}
+.a-header .container .header-carousel .slick-list,
+.a-header .container .header-carousel .slick-track {
+  display: flex;
+  flex-grow: 1;
+}
+.a-header .container .header-carousel .h-carousel-item {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+.a-header:after,
+.a-header:before {
+  content: '';
+  z-index: -1;
+  border-radius: 50%;
+  position: absolute;
+}
+.a-header:before {
+  background: #042751;
+  width: 68.72222222222223rem;
+  height: 68.72222222222223rem;
+  left: 27%;
+  top: -11.38888888888889rem;
+}
+.a-header:after {
+  width: 45.94444444444444rem;
+  height: 45.94444444444444rem;
+  left: 38%;
+  top: 2%;
+  background: radial-gradient(50% 50% at 50% 50%, #003779 0%, #032b5a 100%);
+}
+.h-carousel-item {
+  outline: none !important;
+}
+.carousel-text {
+  max-width: 29.27777777777778rem;
+}
+.carousel-text .text {
+  max-width: 20.22222222222222rem;
+  margin: 1.444444444444444rem 0 1.777777777777778rem 0;
+}
+.carousel-img {
+  position: absolute;
+  right: -10%;
+  bottom: 0px;
+  pointer-events: none;
+}
+.carousel-img img {
+  pointer-events: none;
+}
+.slick-dots {
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  list-style: none;
+  display: flex;
+}
+.slick-dots li {
+  margin-right: 17px;
+  cursor: pointer;
+}
+.slick-dots li button {
+  font-size: 0px;
+  width: 0.444444444444444rem;
+  height: 0.611111111111111rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #fff;
+}
+.slick-dots li.slick-active button {
+  transform: scale(1.2);
+  height: 14px;
+  background: #10141d;
+  border: 1px solid #fff;
+}
+header .slick-active .header,
+header .slick-active .text,
+header .slick-active .btn {
+  opacity: 0;
+  animation: fadeIn 0.7s 1s forwards;
+}
+header .slick-active .carousel-img img {
+  opacity: 0;
+  animation: fadeInUp 0.7s 0s forwards;
+}
+header .slick-active .text {
+  animation-delay: 1.3s;
+}
+header .slick-active .btn {
+  animation-delay: 1.6s;
+}
+.header-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  position: relative;
+}
+.h-carousel-prev,
+.h-carousel-next {
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  padding: 1.111111111111111rem 1.222222222222222rem 1.111111111111111rem 1.388888888888889rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, #003779 0%, #032b5a 100%);
+}
+.h-carousel-next {
+  left: unset;
+  right: -100px;
+}

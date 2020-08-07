@@ -1,0 +1,193 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'single-facultet',
+            pageTitle: 'Ташматова Азатгуль Рахимовна',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Структура ВУЗа',
+                    href: '/'
+                },
+                {
+                    name: 'Факультеты и кафедры',
+                    href: '/'
+                },
+                {
+                    name: 'Общеобразовательный факультет',
+                    href: '/'
+                },
+                {
+                    name: 'Кафедра «Политология, история и социальные технологии»',
+                    href: '/'
+                }
+            ],
+            person: {
+                name: 'Мансуров Азаз Турдимуратович',
+                degrees: 'Профессор',
+                job: 'Ректор',
+                img: 'teacher.png',
+                workingDays: [
+                    'Суббота (с 10.00 до 12.00)'
+                ],
+                phone: '+998 71 244-53-20',
+                email: 'rektor@transportun.uz',
+                education: [
+                    '1996-2001 - Санкт-Петербургский университет кино и телевидения, экономический факультет управления.',
+                    '2001-2003 годы – аспирантура Санкт-Петербургского государственного университета кино и телевидения.'
+                ],
+                awards: [
+                    '— Почетная грамота Министерства науки и высшего образования Российской Федерации за значительные заслуги в сфере образования и многолетний добросовестный труд.',
+                    '— Почетная грамота Министерства науки и высшего образования Российской Федерации за значительные заслуги в сфере образования и многолетний добросовестный труд.'
+                ],
+                practise: [
+                    'В СПбГИКиТ работает с 2001 года.',
+                    'С 2001г. по 2004г. – ассистент кафедры управления экономическими и социальными процессами.',
+                    'С 2004г. по настоящее время – доцент кафедры управления экономическими и социальными процессами в кино и телеиндустрии.',
+                    'С 2007г. по 2011г. – ученый секретарь диссертационного совета Д 210.021.02 по экономическим наукам при Санкт-Петербургском государственном университете кино и телевидения.',
+                ],
+                projects: [
+                    'За время руководства факультетом было разработано и проведено более 150 дополнительных профессиональных программ повышения квалификации и переподготовки, в том числе с использованием дистанционных образовательных технологий и электронного обучения.',
+                    'Проведено 25 дополнительных профессиональных программ по заказу Министерства культуры РФ.',
+                    'В 2019г. на факультете открыта мастерская А.Н. Сокурова «Режиссер игрового и документального фильма, режиссер монтажа».'
+                ],
+                cvolification: [
+                    'Профессиональная переподготовка по ДПП "Медиакоммуникации. Телевидение", 2017г.',
+                    'Повышение квалификации по ДПП "Основы педагогического мастерства, в том числе в электронной образовательной среде и инклюзивном образовании", 2018 г.',
+                    'Ежегодное повышение квалификации по ДПП «Актуальные вопросы управления подразделение дополнительного профессионального образования»'
+                ],
+                craft: [
+                    '1. Кино и современная культура. Сб. трудов. Л., Изд. ЛГИТМиК им. Н.К.Черкасова,1988.',
+                    '2. Андрей Белый. Критика. Эстетика. Теория символизма. В 2-х томах. М. Изд. «Искусство», 1994.',
+                    '3. Век петербургского кино. Сб. трудов. СПб. Изд. РИИИ. 2007.',
+                    '4. Киноискусство и кинозрелище. Сб.трудов. В 2 выпусках. СПб. Изд. РИИИ, 2011.'
+                ]
+            }
+            
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/library-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        .person-card.personal
+            .row 
+                .person-img     
+                    img(src="images/"+page.person.img)
+                .person-info 
+                    h3.normal-header= page.person.name 
+                    .row.info-row 
+                        .col 
+                            p.gray-text Научная степень и звание:
+                        .col-2 
+                            p.gray-text 
+                                b= page.person.degrees
+                    
+                    .row.info-row 
+                        .col 
+                            p.gray-text Должность:
+                        .col-2 
+                            p.gray-text 
+                                b= page.person.job
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text Время приема:
+                        .col-2 
+                            each day in page.person.workingDays 
+                                p.gray-text 
+                                    b= day
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text Телефон:
+                        .col-2 
+                            p.gray-text 
+                                b= page.person.phone
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text E-mail:
+                        .col-2 
+                            p.gray-text 
+                                b= page.person.email
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text Соц. сети:
+                        .col-2 
+                            a(href="#").social-link
+                                img(src="images/instagram_black.svg")
+                            a(href="#").social-link
+                                img(src="images/vk_black.svg")
+                            a(href="#").social-link
+                                img(src="images/twitter_black.svg")
+                    .row.info-row 
+                        .col 
+                            p.gray-text Уровень образования:
+                        .col-2 
+                            each day in page.person.education 
+                                p.gray-text 
+                                    b= day 
+                                br
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text Награды:
+                        .col-2 
+                            each day in page.person.awards 
+                                p.gray-text 
+                                    b= day 
+                                br
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text Этапы профессиональной деятельности:
+                        .col-2 
+                            each day in page.person.practise 
+                                p.gray-text 
+                                    b= day 
+                                br
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text Этапы профессиональной деятельности:
+                        .col-2 
+                            each day in page.person.projects 
+                                p.gray-text 
+                                    b= day 
+                                br
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text Повышение квалификации:
+                        .col-2 
+                            each day in page.person.cvolification 
+                                p.gray-text 
+                                    b= day 
+                                br
+
+                    .row.info-row 
+                        .col 
+                            p.gray-text Научные труды:
+                        .col-2 
+                            each day in page.person.craft 
+                                p.gray-text 
+                                    b= day 
+                                br

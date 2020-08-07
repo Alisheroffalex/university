@@ -1,0 +1,97 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'contact',
+            pageTitle: 'Контакты',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                }
+            ],
+
+            sectionCard: {
+                name: 'Связь с редакцией журнала',
+                cardInfo: { 
+                    name: 'Транспортный университет',
+                    fields: [
+                        {
+                            field: 'Адрес',
+                            info: 'г. Ташкент, 100200, проспект Амира Темура, 108'
+                        },
+                        {
+                            field: 'Телефон',
+                            info: '+998 71 238 64 15'
+                        },
+                        {
+                            field: 'E-mail',
+                            link: true,
+                            info: 'info@tuit.uz'
+                        }
+                    ]
+                }
+            }
+
+        }
+
+append styles
+    each fontURL in assets.page.contact.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.contact.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/business-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        .cafedra-margin-block
+            .row.contact-row.sp-between
+                .col-4 
+                    .person-card.no-image.small-no-image-card
+                        .person-info 
+                            h3.normal-header= page.sectionCard.cardInfo.name 
+                            
+                            each fields in page.sectionCard.cardInfo.fields 
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text= fields.field+ ':'
+                                    .col-2  
+                                        if fields.link 
+                                            a(href="#").gray-text.blue-text 
+                                                b(class="blue-text")= fields.info
+                                        else 
+                                            p.gray-text 
+                                                b= fields.info
+                .col-6 
+                    #map
+
+        .cafedra-margin-block
+            .header-margin-block.center 
+                h1.header Напишите нам
+                hr.header-block-line
+
+            form(action="#", metod="post").row.contact-row.sp-between 
+                .col-4 
+                    .form-group
+                        label(for="name") Ваше имя
+                        input(type="text", name="name" id="name", autocomplete="off").required
+                    .form-group
+                        label(for="email") E-mail
+                        input(type="email",name="email"  id="email", autocomplete="off").required
+                    .form-group
+                        label(for="subject") Тема обращения
+                        input(type="text",name="subject"  id="subject", autocomplete="off").required
+                .col-6
+                    .form-group 
+                        label(for="text") Текст обращения
+                        textarea(name="text",id="name",cols="30", rows="5").required
+                    button(type="submit").btn Отправить
+
+    #modal-success(data-izimodal-title='Ваша заявка принята!', data-izimodal-subtitle='Наш специалист свяжется с вами')

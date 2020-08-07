@@ -1,0 +1,250 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'single-facultet',
+            pageTitle: 'Научный журнал «Вестник университета»',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Деятельность',
+                    href: '/'
+                },
+                {
+                    name: 'Научная деяельность',
+                    href: '/'
+                },
+                {
+                    name: 'Научная деяельность',
+                    href: '/'
+                },
+            ],
+            about: {
+                title: 'Об издательстве',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            },
+            bosses: [
+                {
+                    name: 'Главный редактор',
+                    person: [
+                        {
+                            name: 'Ходжаева Рузиби Мадиевна',
+                            degrees: 'Доцент',
+                            job: 'Заведующий кафедрой «Политология и социальные технологии»',
+                            img: 'rektor.png'
+                        }
+                    ]
+                },
+                {
+                    name: 'Редакционная коллегия',
+                    person: [
+                        {
+                            name: 'Ходжаева Рузиби Мадиевна',
+                            degrees: 'Доцент',
+                            extraSmall: true,
+                            job: 'Заведующий кафедрой «Политология и социальные технологии»',
+                            img: 'rektor.png'
+                        },
+                        {
+                            name: 'Ходжаева Рузиби Мадиевна',
+                            degrees: 'Доцент',
+                            extraSmall: true,
+                            job: 'Заведующий кафедрой «Политология и социальные технологии»',
+                            img: 'rektor.png'
+                        }
+                    ]
+                }
+            ],
+            requirements: [
+                {
+                    name: 'Общие требования',
+                    list: [
+                        {
+                            name: 'Статьи в журнал принимаются на трех языках: узбекском, английском и русском. В обязательном порядке представляется перевод всей статьи на английский язык.',
+                        },
+                        {
+                            name: 'Название статьи, аннотация, ключевые слова представляются на трех языках: узбекском, английском и русском.',
+                        },
+                        {
+                            name: 'Приводится УДК.',
+                        },
+                        {
+                            name: 'Приводится информация об авторе(ах) статьи. Информация включает в себя (на отдельном листе):',
+                            blocks: [
+                                'полностью фамилия, имя, отчество автора (ов),',
+                                'место работы и должность без сокращений,',
+                                'контактные телефоны и электронную почту.',
+                                'рубрику журнала, в которой будет размещаться статья'
+                            ]
+                        },
+                        {
+                            name: 'К статье прилагаются: рецензия на статью и экспертное заключение о возможности опубликования в открытой печати.',
+                        },
+                        {
+                            name: 'В редакцию представляются по одному экземпляру бумажного варианта статьи с необходимыми документами и электронный вариант статьи.',
+                        },
+                        {
+                            name: 'Статья должна содержать четкую постановку задачи, описание метода исследования, изложение полученных результатов и указание на область их применения.',
+                        },
+                        {
+                            name: 'Объем подаваемых статей, включая иллюстрации и библиографию, не должен превышать 15 стр.',
+                        },
+                    ]
+                },
+                {
+                    name: 'Общие правила',
+                    list: [
+                        {
+                            name: 'Автор несет ответственность за приведенную информацию.',
+                        },
+                        {
+                            name: 'Редакция не возвращает и не комментирует статьи.',
+                        },
+                        {
+                            name: 'Редакция имеет право отправить статью на дополнительную экспертизу.',
+                        },
+                        {
+                            name: 'Если статья не имеет научную ценность, не оформлена по требованию или оформлена другим форматом редакция имеет право не принимать статью.',
+                        },
+                        
+                    ]
+                },
+                {
+                    name: 'Рубрики журнала',
+                    list: [
+                        {
+                            name: 'Информатика и информационные технологии',
+                        },
+                        {
+                            name: 'Инфокоммуникационные сети и системы.',
+                        },
+                        {
+                            name: 'Радиотехника, радиосвязь и телерадиовещание.',
+                        },
+                        {
+                            name: 'Математическое моделирование и программирование.',
+                        },
+                        {
+                            name: 'Защита информации.',
+                        },
+                        {
+                            name: 'Микроэлектроника и схемотехника.',
+                        },
+                        {
+                            name: 'Общественно-экономические и гуманитарные проблемы.',
+                        },
+                        
+                    ]
+                }
+            ],
+            sectionCard: {
+                name: 'Связь с редакцией журнала',
+                cardInfo: { 
+                    name: 'Редакция журнала «Вестник ТУИТ»',
+                    fields: [
+                        {
+                            field: 'Адрес',
+                            info: '100202, Республика Узбекистан, г.Ташкент, Юнусабадский район, ул. Амира Темура, д-108, Ташкентский университет информационных технологий, корпус –А, 2-этаж, 232-ком.'
+                        },
+                        {
+                            field: 'Телефон',
+                            info: '+998 71 244-53-20'
+                        },
+                        {
+                            field: 'E-mail',
+                            info: 'rektor@transportun.uz'
+                        },
+                        {
+                            field: 'Время приёма',
+                            info: 'Среда - Четверг (с 10.00 до 14.00)'
+                        }
+                    ]
+                }
+            }
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/people-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        .cafedra-margin-block
+            h1.header= page.about.title 
+            hr.header-block-line
+            br
+            p.text.w-normal= page.about.text
+
+        each boss in page.bosses 
+            .personal-wrapper 
+                .header-block 
+                    h1.header=boss.name 
+                    hr.header-block-line
+                each person in boss.person
+                    .person-card.small-card(class=person.extraSmall ? 'extra-small' : '') 
+                        .row 
+                            .person-img     
+                                img(src="images/"+person.img)
+                            .person-info 
+                                h3.normal-header= person.name 
+                                
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Научная степень и звание:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.degrees
+                                
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Должность:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.job
+                                .row.info-row.responsive.center
+                                    a(href="#").blue-text Подробнее
+        
+        each section in page.requirements
+            .cafedra-margin-block
+                h1.header= section.name 
+                hr.header-block-line
+                br
+                -var index = 1
+                each item in section.list
+                    p.text.w-normal= index++ + '. '+ item.name
+                    if item.blocks 
+                        ul
+                            each li in item.blocks 
+                                li.text.w-normal= li
+
+        .cafedra-margin-block
+            h1.header= page.sectionCard.name 
+            hr.header-block-line
+
+            .person-card.no-image
+                .person-info 
+                    h3.normal-header= page.sectionCard.cardInfo.name 
+                    
+                    each fields in page.sectionCard.cardInfo.fields 
+                        .row.info-row 
+                            .col 
+                                p.gray-text= fields.field+ ':'
+                            .col-2 
+                                p.gray-text 
+                                    b= fields.info
+                    
+        
+        

@@ -1,2 +1,22 @@
 mixin b-header
-    p I
+    .container 
+        include nav.pug
+
+        .header-content 
+            span.h-carousel-prev
+                img(src="/images/prev.svg")
+
+            span.h-carousel-next
+                img(src="/images/next.svg")
+            .header-carousel
+                each item in header.carousel 
+                    .h-carousel-item.row
+                        .carousel-text
+                            h1.header= item.header
+                            p.text= item.text
+                            a(href="#").btn Подробнее
+
+                                
+                        .carousel-img   
+                            img(src='images/'+ item.img, class="car-img")  
+        

@@ -1,2 +1,73 @@
 mixin b-footer
-    p alive
+    .f-carousel
+        each item in footer.slider 
+            a(href="#").f-item.row 
+                img(src="images/"+item.img).f-item-logo
+                p.text=item.title
+
+    .container 
+        .row.first-col-row-footer  
+            .f-col  
+                a(href="#")
+                    img(src="images/logo.png").f-logo 
+            .col.address-col
+                p.text= footer.address
+            .col.f-social
+                a(href="#").social-link 
+                    img(src="images/instagram.svg")
+                a(href="#").social-link 
+                    img(src="images/vk.svg")
+                a(href="#").social-link 
+                    img(src="images/twitter.svg")
+        
+        .row.f-navigation
+            .f-col
+                h5.small-header Новости
+                    i.icon.fas.fa-chevron-down.responsive
+                ul.f-dropdown 
+                    each link in footer.news 
+                        li 
+                            a(href=link.href)= link.name
+            
+            .f-col
+                h5.small-header Структура ВУЗа
+                    i.icon.fas.fa-chevron-down.responsive
+                ul.f-dropdown 
+                    each link in footer.structure 
+                        li 
+                            a(href=link.href)= link.name
+
+            .f-col
+                h5.small-header Деятельность
+                    i.icon.fas.fa-chevron-down.responsive
+                ul.f-dropdown
+                    each link in footer.job 
+                        li 
+                            a(href=link.href)= link.name
+
+            .f-small-col 
+                h5.small-header Абитуриент
+                    i.icon.fas.fa-chevron-down.responsive
+                ul.f-dropdown
+                    each link in footer.student 
+                        li 
+                            a(href=link.href)= link.name
+            
+            .f-small-col 
+                h5.small-header Студент
+                    i.icon.fas.fa-chevron-down.responsive
+                ul.f-dropdown
+                    each link in footer.student 
+                        li 
+                            a(href=link.href)= link.name
+
+            .f-small-col 
+                h5.small-header Другое
+                    i.icon.fas.fa-chevron-down.responsive
+                ul.f-dropdown
+                    each link in footer.other 
+                        li 
+                            a(href=link.href)= link.name
+
+        .footer-footer
+            p.text ©2020 Транспортный университет. Все права защищены.

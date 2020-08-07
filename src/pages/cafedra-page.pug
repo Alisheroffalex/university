@@ -1,0 +1,328 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'single-facultet',
+            pageTitle: 'Кафедра «Политология, история и социальные технологии»',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Структура ВУЗа',
+                    href: '/'
+                },
+                {
+                    name: 'Факультеты и кафедры',
+                    href: '/'
+                },
+                {
+                    name: 'Общеобразовательный факультет',
+                    href: '/'
+                }
+            ],
+            about: {
+                title: 'О кафедре',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            },
+
+            cafedras: [
+                {
+                    name: 'Кафедра «Лингводидактика»',
+                    href: '#'
+                },
+                {
+                    name: 'Кафедра «Политология, история и социальные технологии»',
+                    href: '#'
+                },
+                {
+                    name: 'Кафедра «Психология, социология, государственное и муниципальное управление»',
+                    href: '#'
+                },
+                {
+                    name: 'Кафедра «Русский язык и межкультурная коммуникация»',
+                    href: '#'
+                },
+                {
+                    name: 'Кафедра «Сервис и туризм»',
+                    href: '#'
+                },
+                {
+                    name: 'Кафедра «Философия и культурология»',
+                    href: '#'
+                }
+            ],
+
+            bakalvr: [
+                {
+                    number: '5330500',
+                    name: 'Компьютерный инжиниринг ("Компьютерный инжиниринг", "ИТ-сервис","Мультимедийные технологии")'
+                }
+            ],
+
+            magistr: [
+                {
+                    number: '5330500',
+                    name: 'Компьютерный инжиниринг (“Проектирование компьютерных систем”, “Проектирование прикладных программных средств”, “Информационные и мультимедийные технологии”)'
+                },
+                {
+                    number: '5330500',
+                    name: '“Управление системы электронного правительства”'
+                }
+            ],
+            bosses: [
+                
+                {
+                    name: 'Мансуров Азаз Турдимуратович',
+                    degrees: 'Профессор',
+                    job: 'Ректор',
+                    img: 'rektor.png',
+                    workingDays: [
+                        'Суббота (с 10.00 до 12.00)'
+                    ],
+                    phone: '+998 71 244-53-20',
+                    email: 'rektor@transportun.uz'
+                }
+                
+            ],
+            forRequirement: [
+                {
+                    name: 'Для степени бакалавра:',
+                    requirements: [
+                        'Анализ и проектирование бизнес-систем',
+                        'Банк и базы данных',
+                        'Интеллектуальные системы',
+                        'ИТ-Сервис инжиниринг и управление услугами',
+                        'Управление технологиями',
+                        'Планирование и анализ информационных систем',
+                        'Системы управления базами данных, Основы Oracle',
+                        'Анализ и проектирование бизнес-систем',
+                        'Анализ и проектирование бизнес-систем',
+                        'Облачные вычисления'
+                    ]
+                },
+                {
+                    name: 'Для степени магистра:',
+                    requirements: [
+                        'Анализ и проектирование бизнес-систем',
+                        'Банк и базы данных',
+                        'Интеллектуальные системы',
+                        'ИТ-Сервис инжиниринг и управление услугами',
+                        'Управление технологиями',
+                        'Планирование и анализ информационных систем',
+                        'Системы управления базами данных, Основы Oracle',
+                        'Анализ и проектирование бизнес-систем',
+                        'Анализ и проектирование бизнес-систем',
+                        'Облачные вычисления'
+                    ]
+                }
+            ],
+            studies: [
+                {
+                    name: 'Научно-методические работы кафедры:',
+                    requirements: [
+                        'Зайнидинов Х.Н., Усманов Б.Ш. «Архитектура компьютеров и компьютерных систем», учебник для технических ВУЗов.',
+                        'Якубов М.К., Зайнидинов Х.Н., Юлдашев Р.Р., Маликова Н.М. «Электронное правительство».',
+                        'Хўжакулов Т.Н., Зайнидинов Х.Н., Атаджанова М.П. Учебник по искусственному интеллекту.',
+                        'Х.Н. Зайнидинов, Ф.М. Алимова, "Основы электронного бизнеса и мобильного электронного бизнеса".',
+                        'Зайнидинов Х.Н., Якубов М.К., Юсупов И.Н. Концепция электронного правительства.',
+                        'Учебное пособие «Бизнес-стратегия и информационная система связи».'
+                    ]
+                },
+                {
+                    name: 'Научно-исследовательские публикации кафедры:',
+                    requirements: [
+                        'Х.Н. Зайнидинов, А.Э. Мирзаев, С.П. Халилов. Применение спектральных свойств базисных сплайнов в задачах цифровой обработки сигналов. // Автоматика и программная инженерия. 2017, №4 (22), г. Новосибирск, Россия, С. 80-85.',
+                        'X.N. Zaynidinov, S.S. Ibragimov, G‘.O. Tojiboеv. Xaar tеz o‘zgartirishlarini bajaruvchi maxsus protsessorlar arxitеkturasini tadqiq etish.// ToshDTU xabarlari, 2018, № 1, 34-40 bеtlar.',
+                        'Х.Н. Зайнидинов, Г.О. Тожибоев, О.У. Маллаев. Параллельные алгоритмы обработки сейсмических сигналов на многоядерных процессорах. // Автоматика и программная инженерия. 2018, №1 (23), г. Новосибирск, Россия, С. 89-95.',
+                        'Нуржанов Ф.Р. “Методы автоматического распознавания изображений лица личности”. //Мухаммад ал-Хоразмий издошлари мавзусидаги Республика илмий-техникавий анжумани материаллари” 27-28 апрель,Урганч -2018 й 332-334 б.',
+                        'Х.Н. Зайнидинов, А.Э. Мирзаев, С.П. Халилов. Применение спектральных свойств базисных сплайнов в задачах цифровой обработки сигналов. // Автоматика и программная инженерия. 2017, №4 (22), г. Новосибирск, Россия, С. 80-85.',
+                        'X.N. Zaynidinov, S.S. Ibragimov, G‘.O. Tojiboеv. Xaar tеz o‘zgartirishlarini bajaruvchi maxsus protsessorlar arxitеkturasini tadqiq etish.// ToshDTU xabarlari, 2018, № 1, 34-40 bеtlar.',
+                        'Х.Н. Зайнидинов, Г.О. Тожибоев, О.У. Маллаев. Параллельные алгоритмы обработки сейсмических сигналов на многоядерных процессорах. // Автоматика и программная инженерия. 2018, №1 (23), г. Новосибирск, Россия, С. 89-95.',
+                        'Нуржанов Ф.Р. “Методы автоматического распознавания изображений лица личности”. //Мухаммад ал-Хоразмий издошлари мавзусидаги Республика илмий-техникавий анжумани материаллари” 27-28 апрель,Урганч -2018 й 332-334 б.'
+                    ]
+                }
+            ],
+            teachers: [
+                {
+                    name: 'Назаров Одилжон Фазылович',
+                    degrees: 'Доцент',
+                    job: 'Заведующий кафедрой «Политология и социальные технологии»',
+                    img: 'teacher.png',
+                    subjects: 'Анализ и проектирование бизнес-систем, Банк и базы данных, ИТ-Сервис инжиниринг и управление услугами, Системы управления базами данных, Основы Oracle, Электронное правительство, сновы е-бизнеса и мобильного е-бизнеса'
+                },
+                {
+                    name: 'Назаров Одилжон Фазылович',
+                    degrees: 'Доцент',
+                    job: 'Заведующий кафедрой «Политология и социальные технологии»',
+                    img: 'teacher.png',
+                    subjects: 'Анализ и проектирование бизнес-систем, Банк и базы данных, ИТ-Сервис инжиниринг и управление услугами, Системы управления базами данных, Основы Oracle, Электронное правительство, сновы е-бизнеса и мобильного е-бизнеса'
+                },
+                {
+                    name: 'Назаров Одилжон Фазылович',
+                    degrees: 'Доцент',
+                    job: 'Заведующий кафедрой «Политология и социальные технологии»',
+                    img: 'teacher.png',
+                    subjects: 'Анализ и проектирование бизнес-систем, Банк и базы данных, ИТ-Сервис инжиниринг и управление услугами, Системы управления базами данных, Основы Oracle, Электронное правительство, сновы е-бизнеса и мобильного е-бизнеса'
+                },
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/library-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        .cafedra-margin-block
+            h1.header= page.about.title 
+            hr.header-block-line
+            br
+            p.text.w-normal= page.about.text
+
+        .cafedra-margin-block
+            h1.header Бакалавриатура
+            hr.header-block-line
+            
+            br 
+            br
+            each cafedra in page.bakalvr
+                .row.facultet-row 
+                    span.text.bold.blue-text= cafedra.number 
+                    p.text.bold= cafedra.name
+
+        .cafedra-margin-block
+            h1.header Магистратура 
+            hr.header-block-line
+            
+            br 
+            br
+            each cafedra in page.magistr
+                .row.facultet-row 
+                    span.text.bold.blue-text= cafedra.number 
+                    p.text.bold= cafedra.name
+        
+        .cafedra-margin-block 
+            h1.header На кафедре преподаются следующие предметы
+            hr.header-block-line
+            br 
+            each block in page.forRequirement 
+                .margin-small-block 
+                    h2.blue.medium-header= block.name
+                    each cafedra in block.requirements
+                        p.blue-text-btn.blue-text-btn-type= cafedra
+
+        .cafedra-margin-block 
+            h1.header Научно-исследовательские работы кафедры
+            hr.header-block-line
+            br 
+            each block in page.studies 
+                .margin-small-block 
+                    h2.blue.medium-header= block.name
+                    each cafedra in block.requirements
+                        p.blue-text-btn.blue-text-btn-type.longer= cafedra
+
+        .cafedra-margin-block 
+            h1.header Заведущий кафедры
+            hr.header-block-line
+            .personal-wrapper 
+                each person in page.bosses    
+                    .person-card 
+                        .row 
+                            .person-img     
+                                img(src="images/"+person.img)
+                            .person-info 
+                                h3.normal-header= person.name 
+                                
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Научная степень и звание:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.degrees
+                                
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Должность:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.job
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Время приема:
+                                    .col-2 
+                                        each day in person.workingDays 
+                                            p.gray-text 
+                                                b= day
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Телефон:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.phone
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text E-mail:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.email
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Соц. сети:
+                                    .col-2 
+                                        a(href="#").social-link
+                                            img(src="images/instagram_black.svg")
+                                        a(href="#").social-link
+                                            img(src="images/vk_black.svg")
+                                        a(href="#").social-link
+                                            img(src="images/twitter_black.svg")
+
+        .cafedra-margin-block 
+            h1.header Преподавательский состав кафедры
+            hr.header-block-line
+            .personal-wrapper 
+                each person in page.teachers    
+                    .person-card.small-card.have-overlay
+                        .row 
+                            .person-img     
+                                img(src="images/"+person.img)
+                            .person-info 
+                                h3.normal-header= person.name 
+                                
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Научная степень и звание:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.degrees
+                                
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Должность:
+                                    .col-2 
+                                        p.gray-text 
+                                            b= person.job
+
+                                .row.info-row 
+                                    .col 
+                                        p.gray-text Предметы:
+                                    .col-2  
+                                        p.gray-text 
+                                            b= person.subjects
+                        .card-overlay.center 
+                            a(href="/teacher.html").btn Подробнее

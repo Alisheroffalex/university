@@ -1,0 +1,18 @@
+mixin faculty
+    .container.faculty
+        .header-block
+            h1.header= faculty.blockTitle
+            hr.header-block-line 
+
+        .f-gird 
+            each fac in faculty.faculties 
+                .faculty-box
+                    .faculty-text 
+                       h2.medium-header= fac.title 
+                       a(href="#").btn.btn-gray 
+                            span.desktop Подробнее
+                            span.responsive 
+                                i.fas.fa-angle-double-right
+                    img(src="images/"+fac.img).faculty-overlay
+                    
+        

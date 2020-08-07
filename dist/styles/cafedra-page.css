@@ -1,0 +1,6 @@
+.center {
+  flex-direction: column;
+}
+.center hr {
+  width: 6.833333333333333rem;
+}

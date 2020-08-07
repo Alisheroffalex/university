@@ -3,12 +3,103 @@ extends _components/layouts/l-public
 append variables
     -
         var page = {
-            name: 'home'
+            name: 'home',
+            newsSectionTitle: 'Основные новости',
+            newsResponsiveSlider: true,
+            news: [
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Преподаватели дали советы будущим студентам Российского университеasdsadas sad sad asdта транспорта',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                },
+                {
+                    name: 'Российский университет транспорта приглашает школы к сотрудничеству',
+                    img: 'main-news.png',
+                    date: '12.07.2020',
+                    category: 'Жизнь университета'
+                }
+            ],
+            serviceBlocktitle: 'Интерактивные услуги',
+            services: [
+                {
+                    name: 'Электронная библиотека',
+                    img: 'laptop-icon.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Онлайн оплата контракта',
+                    img: 'computer-icon.svg',
+                    href: '#'
+                },
+                {
+                    name: 'ACM',
+                    img: 'acm-icon.png',
+                    href: '#'
+                },
+                {
+                    name: 'UNITEST',
+                    img: 'exam-icon.svg',
+                    href: '#'
+                },
+                {
+                    name: 'UNISYS',
+                    img: 'lan-icon.svg',
+                    href: '#'
+                },
+                {
+                    name: 'MASOFAVIY TA’LIM',
+                    img: 'study-icon.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Виртуальная приёмная',
+                    img: 'desk-icon.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Приём 2020',
+                    img: 'resume-icon.svg',
+                    href: '#'
+                }
+            ]
         }
 
 append styles
+    each fontURL in assets.page.home.styles
+        link(rel='stylesheet' href= fontURL)
 
 append scripts
+    each script in assets.page.home.scripts
+        script(src=script)
 
 append content
-    p am
+    +main-news
+    +university
+    +faculty
+    +services 
+    +news 

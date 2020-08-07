@@ -1,0 +1,78 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'cafedra',
+            pageTitle: 'Научные журналы',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Деятельность',
+                    href: '/'
+                },
+                {
+                    name: 'Научная деяельность',
+                    href: '/'
+                },
+            ],
+            journals: [
+                {   
+                    name: 'Научный журнал «Вестник университета»',
+                    desc: "«Вестник Университета» — теоретический и научно-методический журнал. Издается с января 1999 г. и входит в «Перечень ВАК» по направлениям «экономика» и «социология».",
+                    registerdate: 'Журнал зарегистрирован в Министерстве связи и массовых коммуникаций РФ (№ 77-1361 от 10.12.1999 г.)',
+                    img: 'journal.png',
+                    website: 'vestnik.guu.ru'
+                },
+                {   
+                    name: 'Научный журнал «Вестник университета»',
+                    desc: "«Вестник Университета» — теоретический и научно-методический журнал. Издается с января 1999 г. и входит в «Перечень ВАК» по направлениям «экономика» и «социология».",
+                    registerdate: 'Журнал зарегистрирован в Министерстве связи и массовых коммуникаций РФ (№ 77-1361 от 10.12.1999 г.)',
+                    img: 'journal2.png',
+                    website: 'vestnik.guu.ru'
+                },
+                {   
+                    name: 'Научный журнал «Вестник университета»',
+                    desc: "«Вестник Университета» — теоретический и научно-методический журнал. Издается с января 1999 г. и входит в «Перечень ВАК» по направлениям «экономика» и «социология».",
+                    registerdate: 'Журнал зарегистрирован в Министерстве связи и массовых коммуникаций РФ (№ 77-1361 от 10.12.1999 г.)',
+                    img: 'journal3.png',
+                    website: 'vestnik.guu.ru'
+                },
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/journal-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+        each journal in page.journals 
+            .row.journal-row    
+                img(src="images/"+journal.img).journal-img
+                .row-text 
+                    a(href="#").medium-header= journal.name 
+                        i.fas.fa-angle-double-right.badge.desktop
+                    br
+                    p.text.w-normal= journal.desc
+                    p.text.w-normal= journal.registerdate
+                    br 
+                    p.text.bold Официальный сайт журнала: 
+                        a(href="https://"+journal.website).blue-text= journal.website
+                    br
+                    .center.responsive
+                        a(href="#").blue-text.bold Подробнее
+                            i.fas.fa-angle-double-right.badge
+       

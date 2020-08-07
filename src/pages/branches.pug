@@ -1,0 +1,105 @@
+extends _components/layouts/l-public
+
+append variables
+    -
+        var page = {
+            name: 'cafedra',
+            pageTitle: 'Центр и отделения',
+            pageParents: [
+                {
+                    name: 'Главная',
+                    href: '/'
+                },
+                {
+                    name: 'Структура ВУЗа',
+                    href: '/'
+                }
+            ],
+
+            boxes: [
+                {
+                    name: 'Информационно-ресурсный центр',
+                    img: 'support.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Центр информационных технологий',
+                    img: 'report.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Учебный центр повышения квалификации и переподготовки',
+                    img: 'exam.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Отдел внутреннего контроля и мониторинга',
+                    img: 'partner.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Отдел кадров',
+                    img: 'people.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Отдел магистратуры',
+                    img: 'graduation.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Научный отдел',
+                    img: 'microscope.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Маркетинговый отдел',
+                    img: 'social-media-marketing.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Приёмная',
+                    img: 'desk_1.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Отдел союза молодёжи',
+                    img: 'girl.svg',
+                    href: '#'
+                },
+                {
+                    name: 'Отдел работы с региональными образовательными учреждениями',
+                    img: 'school.svg',
+                    bigCard: true,
+                    href: '#'
+                },
+                {
+                    name: 'Информация о спортивных сооружениях, учебно-лабораторном оборудовании и материально-технической базе вуза',
+                    img: 'presentation.svg',
+                    bigCard: true,
+                    href: '#'
+                },
+            ]
+        }
+
+append styles
+    each fontURL in assets.page.cafedra.styles
+        link(rel='stylesheet' href= fontURL)
+
+append scripts
+    each script in assets.page.news.scripts
+        script(src=script)
+
+append content
+    .banner(style="background-image: url(/images/talking-banner.png);")
+        .overlay 
+            .container 
+                h1.header= page.pageTitle
+
+    .the-content.container
+       .branch-row 
+            each box in page.boxes 
+                a(href=box.href, class=box.bigCard ? 'big-box': '').branch-box 
+                    .branch-box-img 
+                        img(src="images/"+box.img, alt="")
+                    h2.medium-header= box.name

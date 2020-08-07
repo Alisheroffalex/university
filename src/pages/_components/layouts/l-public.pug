@@ -17,10 +17,14 @@ append scripts
 append body
 
     header.a-header
-        +b-header
+        if page.name === 'home'
+            +b-header
+        else 
+            +page-header
 
     main.a-content
-        block content 
+        block content
+            
 
     footer.a-footer
         +b-footer

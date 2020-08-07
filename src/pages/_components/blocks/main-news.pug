@@ -1,0 +1,54 @@
+mixin main-news 
+    section(class=page.name === 'home' ? 'main-page-news' : '').container.main-news
+        .header-block
+            h1.header= page.newsSectionTitle
+            hr.header-block-line 
+
+        if page.categoryRemove 
+            
+        else 
+            ul.row.category-panel 
+                li 
+                    a(href="#", class="active") Все новости
+                li 
+                    a(href="#") Новости университета
+                li 
+                    a(href="#") Массовые мероприятия 
+                    i.icon.fas.fa-chevron-down
+                    ul.dropdown 
+                        li
+                            a(href="#") Мероприятия
+                        li
+                            a(href="#") Мероприятия
+
+                li 
+                    a(href="#") Объявления
+                li 
+                    a(href="#") Обмен новостями и объявлениями
+
+
+        .row-grid(class=page.newsResponsiveSlider ? 'mobile-slider-news' : '')   
+            each news in page.news 
+                .card
+                    img(src="images/"+news.img, alt=news.name, class="card-img")
+
+                    .card-container
+                        a(href='#')
+                            i.fas.fa-angle-double-right.badge
+
+                        .card-body 
+                            a(href='#').small-header= news.name
+
+                        .card-footer.row.sp-between 
+                            span(class=page.dateBlue ? 'badge-date': '').gray-text= news.date 
+
+                            a(href="#").gray-text=news.category 
+                    
+        if page.newsPagination
+            .center 
+                if page.btnText 
+                    a(href="#", class="btn")= page.btnText 
+                else 
+                    a(href="#", class="btn") Больше новости
+
+        else 
