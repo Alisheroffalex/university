@@ -238,7 +238,7 @@
   opacity: 0;
   pointer-events: none;
   width: 0;
-  transition: 0.2s;
+  transition: width 0.2s, opacity 0.2s;
 }
 .search-div.active .search-input {
   width: 23.77777777777778rem;

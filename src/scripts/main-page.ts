@@ -78,12 +78,13 @@ $('.burger-close').click(()=> {
     $('#overlay').removeClass('active')
 })
 
-$('.mobile-ul-menu li i').on('click', function() {
+$('.m-dropdown-wrapper a').on('click', function(event) {
+    event.preventDefault();
     $(this).parent().find('.dropdown-menu').first().toggleClass('dropdown-open');
 
-    $('.dropdown-menu li').on('click', function() {
-        $(this).find('.dropdown-menu').first().toggleClass('dropdown-open');
-     });
+    // $('.dropdown-menu li').on('click', function() {
+    //     $(this).find('.dropdown-menu').first().toggleClass('dropdown-open');
+    //  });
  });
 
 $(window).scroll(function() {    

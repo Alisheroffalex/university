@@ -1,0 +1,24 @@
+.about-university {
+  margin: 6.944444444444445rem 0 6.333333333333333rem 0;
+  background: #ecf0fb;
+}
+.about-university .row {
+  position: relative;
+  padding: 3.388888888888889rem 0 6.166666666666667rem;
+}
+.about-university .university-text {
+  max-width: 25.444444444444443rem;
+}
+.about-university .university-img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform: scale(1.1);
+  border-radius: 5px;
+  box-shadow: -9px 37px 100px rgba(0,0,0,0.27);
+}
+.about-university .text {
+  line-height: 30px;
+  margin-bottom: 1.888888888888889rem;
+}

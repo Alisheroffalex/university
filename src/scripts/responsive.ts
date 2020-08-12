@@ -35,7 +35,7 @@ $('.mobile-slider-news').slick({
 
 $('.card-list').slick({
     mobileFirst: true ,
-    slidesToShow: 1.4,
+    slidesToShow: 1.2,
     slidesToScroll: 1,
     speed: 500,
     autoplay: true,
@@ -61,7 +61,7 @@ $('.card-list').slick({
             settings: {
                 speed: 500,
                 autoplay: true,
-                slidesToShow: 1.1,
+                slidesToShow: 1.2,
                 slidesToScroll: 1
             }
         }

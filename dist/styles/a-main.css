@@ -818,3 +818,7 @@ i.icon.fas.fa-chevron-down.responsive,
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.uzb-logos a img {
+  width: 20px;
+  height: 20px;
+}

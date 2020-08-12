@@ -1,0 +1,14 @@
+.news {
+  padding-top: 7.555555555555555rem;
+  padding-bottom: 11.11111111111111rem;
+}
+.news .header-block {
+  margin-bottom: 2.611111111111111rem;
+}
+.card-list {
+  flex-grow: 1;
+  margin-left: 1.666666666666667rem;
+}
+.card-list .card-type-2 {
+  max-width: 30.833333333333332rem;
+}

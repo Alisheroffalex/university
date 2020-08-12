@@ -1,0 +1,11 @@
+.banner {
+  height: 30.88888888888889rem;
+}
+.purple-section .main-news {
+  padding: 2.555555555555555rem 0 6.666666666666667rem 0;
+}
+@media screen and (max-width: 992px) {
+  .banner {
+    height: 258px !important;
+  }
+}

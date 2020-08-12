@@ -78,13 +78,20 @@
             height 100%
 
     .search-div 
+        form 
+            position relative
         form img 
             width s(26)
             height s(26)
     
+    .search-div .search-input
+        transform translate(6%, -67%) 
+    
+    .search-div .search-icon
+        transform translate(-22%, -73%)
     .search-div.active .search-input 
         width s(315)
-        transform translate(12%, -30%)
+        
 
     .header 
         font-size 24px
@@ -125,7 +132,11 @@
     
     .slick-dots li button 
         height 11px
-        width 8px
+        width 11px
+
+    .slick-dots li.slick-active button 
+        width 14px
+        height 14px
 
     .burger-wrapper 
         position relative
@@ -202,7 +213,7 @@
     
     .mobile-ul-menu 
         z-index 999
-        height 62vh
+        height 39vh
         overflow-x auto
         li  
             margin-bottom s(20)
@@ -213,8 +224,8 @@
                 pointer-events unset
 
         a 
-            font-size 14px
-            line-height s(17) 
+            font-size 16px
+            line-height 30px
             letter-spacing 0.03em 
             color #1F1F1F
             font-weight bold
@@ -269,9 +280,15 @@
     .category-panel 
         flex-wrap wrap
         a   
-            font-size 12px
+            font-size 14px
+            font-weight 600
+        i 
+            display none
         li
             margin-bottom 10px
+
+            .dropdown   
+                display none
 
     .main-news .row-grid 
         padding-bottom 0
@@ -538,7 +555,9 @@
         .card-footer  
             .gray-text  
                 font-size 12px
-
+    .card-type-2  
+        .gray-text 
+            font-size 12px
     .faculty-card 
         padding 20px 15px
         overflow hidden
@@ -634,3 +653,26 @@
 
     #map 
         margin-top 30px
+
+    .mobile-logos a img,
+    .sp-link img 
+        width 26px
+        height 26px
+
+    .lang-panel 
+        align-items center
+    
+    .lang-row 
+        list-style none 
+
+        li 
+            margin-left 15px
+        a 
+            font-size 14px 
+            line-height 16px
+            letter-spacing 0.03em
+            font-weight 500
+            color grayColor
+            &.active 
+                color #1F1F1F
+            
