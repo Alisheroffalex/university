@@ -1,0 +1,378 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Transport University\n"
+"POT-Creation-Date: 2020-08-18 17:35+0500\n"
+"PO-Revision-Date: 2020-08-18 17:37+0500\n"
+"Last-Translator: \n"
+"Language-Team: Weltlink\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:14
+msgid "г. Москва, ул Образцова, д. 13, стр. 9"
+msgstr ""
+
+#: footer.php:25 includes/breadcrumbs.php:6 index.php:22
+msgid "Новости"
+msgstr ""
+
+#: footer.php:37
+msgid "Структура ВУЗа"
+msgstr ""
+
+#: footer.php:49
+msgid "Деятельность"
+msgstr ""
+
+#: footer.php:61
+msgid "Абитуриент"
+msgstr ""
+
+#: footer.php:73
+msgid "Студент"
+msgstr ""
+
+#: footer.php:85 header.php:70
+msgid "Другое"
+msgstr ""
+
+#: header.php:26
+msgid "Специальные возможности"
+msgstr "Special abilities"
+
+#: header.php:160
+msgid "Мы в соцсетях:"
+msgstr ""
+
+#: includes/breadcrumbs.php:5
+msgid "Главная"
+msgstr ""
+
+#: includes/breadcrumbs.php:8
+#, php-format
+msgid "Результаты поиска по запросу \"%s\""
+msgstr ""
+
+#: includes/breadcrumbs.php:9
+#, php-format
+msgid "Записи с тегом \"%s\""
+msgstr ""
+
+#: includes/breadcrumbs.php:10
+#, php-format
+msgid "Статьи автора %s"
+msgstr ""
+
+#: includes/breadcrumbs.php:11
+msgid "Ошибка 404"
+msgstr ""
+
+#: includes/breadcrumbs.php:12
+#, php-format
+msgid "Страница %s"
+msgstr ""
+
+#: includes/breadcrumbs.php:13
+#, php-format
+msgid "Страница комментариев %s"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:41
+#: includes/custom-post-types/staff.php:39
+msgid "Искать"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:42
+#: includes/custom-post-types/staff.php:40
+msgid "Все"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:43
+msgid "Родительская рубрика"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:44
+msgid "Родительская рубрика:"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:45
+#: includes/custom-post-types/staff.php:43
+msgid "Изменить"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:46
+#: includes/custom-post-types/staff.php:44
+msgid "Обновить"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:47
+#: includes/custom-post-types/staff.php:45
+msgid "Добавить новую"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:48
+#: includes/custom-post-types/staff.php:46
+msgid "Имя новой рубрики"
+msgstr ""
+
+#: includes/custom-post-types/anounces.php:49
+msgid "Рубрики"
+msgstr ""
+
+#: includes/custom-post-types/staff.php:41
+msgid "Родительская Должность"
+msgstr ""
+
+#: includes/custom-post-types/staff.php:42
+msgid "Родительская Должность:"
+msgstr ""
+
+#: includes/custom-post-types/staff.php:47
+msgid "Должности"
+msgstr ""
+
+#: includes/small-functions.php:31
+msgid "No categories"
+msgstr ""
+
+#: includes/small-functions.php:57
+msgid "Header Nav"
+msgstr ""
+
+#: includes/small-functions.php:58
+msgid "Footer Col 1"
+msgstr ""
+
+#: includes/small-functions.php:59
+msgid "Footer Col 2"
+msgstr ""
+
+#: includes/small-functions.php:60
+msgid "Footer Col 3"
+msgstr ""
+
+#: includes/small-functions.php:61
+msgid "Footer Col 4"
+msgstr ""
+
+#: includes/small-functions.php:62
+msgid "Footer Col 5"
+msgstr ""
+
+#: includes/small-functions.php:63
+msgid "Footer Col 6"
+msgstr ""
+
+#: includes/small-functions.php:64
+msgid "Burger Menu"
+msgstr ""
+
+#: index.php:40 page-front.php:43
+msgid "Все новости"
+msgstr "All news"
+
+#: page-alumni-club.php:39 page-staff.php:48 single-cafedra.php:113
+#: single-cafedra.php:209 single-facultets.php:100 single-journals.php:52
+#: single-staff.php:37
+msgid "Научная степень и звание:"
+msgstr ""
+
+#: page-alumni-club.php:47 page-staff.php:56 single-cafedra.php:121
+#: single-cafedra.php:217 single-facultets.php:108 single-journals.php:60
+#: single-staff.php:45
+msgid "Должность:"
+msgstr ""
+
+#: page-alumni-club.php:55
+msgid "Выпускник:"
+msgstr ""
+
+#: page-alumni-club.php:61 page-current-projects.php:75 page-front.php:78
+#: page-front.php:98 page-journals.php:39 page-staff.php:114
+#: parts/organization-card.php:31 single-cafedra.php:179 single-cafedra.php:231
+#: single-facultets.php:166
+msgid "Подробнее"
+msgstr ""
+
+#: page-contacts.php:37
+msgid "Транспортный университет"
+msgstr ""
+
+#: page-contacts.php:40 single-journals.php:105
+msgid "Адрес:"
+msgstr ""
+
+#: page-contacts.php:43
+msgid "г. Ташкент, 100200, проспект Амира Темура, 108"
+msgstr ""
+
+#: page-contacts.php:48 page-staff.php:76 single-cafedra.php:141
+#: single-facultets.php:128 single-journals.php:113 single-staff.php:65
+msgid "Телефон:"
+msgstr ""
+
+#: page-contacts.php:56 page-staff.php:84 single-cafedra.php:149
+#: single-facultets.php:136 single-journals.php:121 single-staff.php:73
+msgid "E-mail:"
+msgstr ""
+
+#: page-contacts.php:71
+msgid "Напишите нам"
+msgstr ""
+
+#: page-contacts.php:77
+msgid "Ваше имя"
+msgstr ""
+
+#: page-contacts.php:81
+msgid "E-mail"
+msgstr ""
+
+#: page-contacts.php:85
+msgid "Тема обращения"
+msgstr ""
+
+#: page-contacts.php:91
+msgid "Текст обращения"
+msgstr ""
+
+#: page-contacts.php:94
+msgid "Отправить"
+msgstr ""
+
+#: page-contacts.php:99
+msgid "Ваша заявка принята!"
+msgstr ""
+
+#: page-contacts.php:99
+msgid "Наш специалист свяжется с вами"
+msgstr ""
+
+#: page-current-projects.php:39
+msgid "Участники проекта:"
+msgstr ""
+
+#: page-current-projects.php:47
+msgid "Координатор проекта:"
+msgstr ""
+
+#: page-current-projects.php:55
+msgid "Срок выполнения:"
+msgstr ""
+
+#: page-current-projects.php:63
+msgid "О проекте:"
+msgstr ""
+
+#: page-current-projects.php:71 parts/organization-card.php:27
+msgid "Официальный сайт:"
+msgstr ""
+
+#: page-facultets-and-cafedra.php:41 single-facultets.php:45
+msgid "Кафедра"
+msgstr ""
+
+#: page-journals.php:38
+msgid "Официальный сайт журнала:"
+msgstr ""
+
+#: page-staff.php:64 single-cafedra.php:129 single-facultets.php:116
+#: single-staff.php:53
+msgid "Время приема:"
+msgstr ""
+
+#: page-staff.php:92 single-cafedra.php:157 single-facultets.php:144
+#: single-staff.php:81
+msgid "Соц. сети:"
+msgstr ""
+
+#: page-university-charter.php:34
+msgid "Устав университета"
+msgstr ""
+
+#: page-video-bryushers.php:32
+msgid "Видео об университете"
+msgstr ""
+
+#: page-video-bryushers.php:41
+msgid "Брошюры"
+msgstr ""
+
+#: page-video-bryushers.php:52
+msgid "Брошюра "
+msgstr ""
+
+#: parts/organization-card.php:11
+msgid "Государство:"
+msgstr ""
+
+#: parts/organization-card.php:19
+msgid "Об учреждении:"
+msgstr ""
+
+#: search.php:18
+msgid "Поиск"
+msgstr ""
+
+#: search.php:31
+msgid "<h1>Результаты поиска: "
+msgstr ""
+
+#: search.php:42
+msgid "Нет результатов по вашему запросу"
+msgstr ""
+
+#: searchform.php:2
+msgid "Введите запрос"
+msgstr ""
+
+#: single-cafedra.php:28
+msgid "О кафедре"
+msgstr ""
+
+#: single-cafedra.php:100
+msgid "Заведущий кафедры"
+msgstr ""
+
+#: single-cafedra.php:225
+msgid "Предметы:"
+msgstr ""
+
+#: single-facultets.php:28
+msgid "О факультете"
+msgstr ""
+
+#: single-facultets.php:39
+msgid "Кафедры факультета"
+msgstr ""
+
+#: single-facultets.php:87
+msgid "Администрация факультета"
+msgstr ""
+
+#: single-journals.php:28
+msgid "Об издательстве"
+msgstr ""
+
+#: single-journals.php:98
+msgid "Связь с редакцией журнала"
+msgstr ""
+
+#: single-journals.php:102
+msgid "Редакция журнала"
+msgstr ""
+
+#: single-journals.php:129
+msgid "Время приёма:"
+msgstr ""
+
+#: single-post.php:48
+msgid "Читайте также"
+msgstr ""
